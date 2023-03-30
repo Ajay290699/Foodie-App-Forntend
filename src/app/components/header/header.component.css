@@ -1,0 +1,15 @@
+img{
+    width: 80px;
+    height: 64px;
+}
+a{
+    color: white;
+    text-decoration: none;
+    margin-left: 50px;
+}
+/* button{
+    margin-left: 200px;
+} */
+.example-spacer {
+    flex: 1 1 auto;
+  }
