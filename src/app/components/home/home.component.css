@@ -1,7 +1,68 @@
 /* .example-spacer {
     flex: 1 1 auto;
   } */
-  img{
+  .backgroundImage{
+    background-image: url(https://www.blueosa.com/wp-content/uploads/2020/01/the-best-top-10-indian-dishes.jpg);
+    background-repeat: no-repeat;
+    margin-left: 35px;
     width: 100%;
     height: 100%;
+  }
+  .select{
+    margin-top: 300px;
+    margin-left: 25%;
+    padding: 5px;
+  }
+  .searchBar{
+    width: 600px;
+    padding: 5px;
+    border-radius: 2px;
+  }
+  .marquee {
+    /* position: fixed; */
+    /* top: 0; */
+    /* left: 0; */
+    /* right: 0; */
+    height: 130px;
+    overflow: hidden;
+    background-color: black;
+    padding: 1rem 0px;
+    /* transform: rotate(-1deg); */
+    transform: translateY(-4rem) rotate(-1deg);
+  
+  }
+  
+  .marquee__content {
+    padding: 2rem 0px;
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 100%;
+    animation: marquee 500s linear infinite;
+    /* border: none; */
+    border-top: 10px dotted white;
+    border-bottom: 10px dotted white;
+    /* border-image: repeating-linear-gradient(
+          to bottom,
+          transparent 10px,
+          transparent 10px,
+          white 10px,
+          white 20px
+        ) 1 1; */
+        /* border-spacing: 10px 0; */
+    font-weight: bold;
+    /* overflow: hidden; */
+    color: white;
+    font-size: 3rem;
+    height: 100%;
+    width: 500%;
+  
+  }
+  
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  .mt{
+    margin-top: 4rem;
   }
