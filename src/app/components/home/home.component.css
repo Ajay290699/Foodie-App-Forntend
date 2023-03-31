@@ -41,7 +41,7 @@
     /* top: 0; */
     /* left: 0; */
     /* right: 0; */
-    height: 130px;
+    height: 80px;
     overflow: hidden;
     background-color: black;
     padding: 1rem 0px;
@@ -76,11 +76,14 @@
   
   }
   
+  
   @keyframes marquee {
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
   }
-  
+  #cuisineTrending{
+    margin-top: -100px;
+  }
   .mt{
-    margin-top: 4rem;
+    margin-top: 400px;
   }

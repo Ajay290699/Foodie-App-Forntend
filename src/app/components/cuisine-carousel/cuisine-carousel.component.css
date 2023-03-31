@@ -1,0 +1,80 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 35px;
+    flex-direction: column;
+}
+.wrapper{
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin: 6rem 0px;
+    /* margin-top: -5px; */
+}
+.wrapper mat-icon{
+    height: 46px;
+    width: 46px;
+    font-size: 2rem;
+    background: #fff;
+    text-align: center;
+    line-height: 46px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 34%;
+    transform: translateY(-50%);
+    box-shadow: rgb(0 0 0 / 25%) 0 0 8px;
+}
+.wrapper mat-icon:first-child{
+    left: -23px;
+  }
+  .wrapper mat-icon:last-child{
+    right: -23px;
+  }
+  .wrapper .carousel {
+    /* width: 90%; */
+    overflow: hidden;
+    font-size: 0px;
+    cursor: pointer;
+    white-space: nowrap ;
+    scroll-behavior: smooth;
+  }
+  .carousel.dragging{
+    cursor: grab;
+    scroll-behavior:none;
+  }
+  .carousel.dragging img{
+    pointer-events: none;
+  }
+  
+  .carousel img{
+    display: inline-block;
+    height: auto;
+    width: 8rem;
+    object-fit: cover;
+    margin-left: 1%;
+    flex: 1;
+    border-radius: 50%;
+    box-shadow: rgb(0 0 0 / 45%) 0 5px 8px;
+  
+  
+  
+  }
+  .cuisineImg{
+    display: inline-block;
+    height: auto;
+    width: 9rem;
+    object-fit: cover;
+    margin-left: 1%;
+    flex: 1;
+    text-align: center;
+  }
+  .cuisineImg h3{
+    font-weight: 300;
+    font-size: 1.4rem;
+  }
+  .carousel img:first-child{
+    margin-left: 0px;
+  }

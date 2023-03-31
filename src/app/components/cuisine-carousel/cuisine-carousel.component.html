@@ -1,1 +1,52 @@
-<p>cuisine-carousel works!</p>
+<body>
+    <div class="wrapper">
+        <mat-icon (click)="onArrowClick($event)">arrow_back</mat-icon>
+        <div class="carousel" (mousemove)="dragging($event)" (mousedown)="dragStart($event)" (mouseup)="dragStop()">
+            <div class="cuisineImg">
+                <img src="../../../assets/images/momo.png" alt="#" draggable="false">
+                <h3>Momo</h3>
+            </div>
+            <div class="cuisineImg">
+                <img src="../../../assets/images/briyani.png" alt="#" draggable="false">
+                <h3>Biryani</h3>
+            </div>
+            <div class="cuisineImg">
+                <img src="../../../assets/images/burger.png" alt="#" draggable="false">
+                <h3>Burger</h3>
+            </div>
+            <div class="cuisineImg">
+                <img src="../../../assets/images/chicken.png" alt="#" draggable="false">
+                <h3>Chicken</h3>
+            </div>
+            <div class="cuisineImg">
+                <img src="../../../assets/images/dosa.png" alt="#" draggable="false">
+                <h3>Dosa</h3>
+            </div>
+            <div class="cuisineImg">
+                <img src="../../../assets/images/friedrice.png" alt="#" draggable="false">
+                <h3>FriedRice</h3>
+            </div>
+            <div class="cuisineImg">
+                <img src="../../../assets/images/idli.png" alt="#" draggable="false">
+                <h3>Idli</h3>
+            </div>
+            <div class="cuisineImg">
+                <img src="../../../assets/images/paneer.png" alt="#" draggable="false">
+                <h3>Paneer</h3>
+            </div>
+            <div class="cuisineImg">
+                <img src="../../../assets/images/rolls.png" alt="#" draggable="false">
+                <h3>Rolls</h3>
+            </div>
+            <div class="cuisineImg">
+                <img src="../../../assets/images/thali.png" alt="#" draggable="false">
+                <h3>Thali</h3>
+            </div>
+            <div class="cuisineImg">
+                <img src="../../../assets/images/pizza.png" alt="#" draggable="false">
+                <h3>Pizza</h3>
+            </div>
+        </div>
+        <mat-icon (click)="onArrowClick($event)">arrow_forward</mat-icon>
+    </div>
+</body>
