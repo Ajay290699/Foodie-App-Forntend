@@ -1,0 +1,30 @@
+.title{
+    margin-left: 46%;
+    font-size: 80px;
+    margin-top: 50px;
+}
+.image{
+    margin-left: 26%;
+}
+.imgContent{
+    margin-left: 40%;
+    margin-top: -160px;
+}
+.imgContent h1{
+    font-size: 48px;
+    font-weight: 500;
+}
+.imgContent p{
+    font-size: 20px;
+}
+.btn{			 
+	color: #fff!important;
+    padding: 10px 20px;
+    background: #39ac31;
+    margin: 20px 0;
+    display: inline-block;
+}
+.link{
+    margin-left: 747px;
+    margin-top: -20px;
+}
