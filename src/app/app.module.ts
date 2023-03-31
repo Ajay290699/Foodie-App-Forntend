@@ -15,6 +15,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
+import { CuisineCarouselComponent } from './components/cuisine-carousel/cuisine-carousel.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import {MatSelectModule} from '@angular/material/select';
     LoginComponent,
     SignupComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CuisineCarouselComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
