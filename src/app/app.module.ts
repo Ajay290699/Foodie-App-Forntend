@@ -20,6 +20,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import {MatCardModule} from '@angular/material/card';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,MatToolbarModule,MatIconModule,MatTabsModule,MatButtonModule,MatInputModule,MatSelectModule,
-    FormsModule,MatCardModule,ReactiveFormsModule
+    FormsModule,MatCardModule,ReactiveFormsModule,MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

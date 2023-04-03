@@ -1,51 +1,60 @@
 
 <body class="image">
     <form>
-        <h3>New Resgistration</h3>
+        <h3>New Registration</h3>
 
-        <label for="username">First Name</label>
-        <input type="text" placeholder="Enter your first Name" id="firstName">
-
-        <label for="username">LastName</label>
-        <input type="text" placeholder="Enter your last Name" id="lastName">
-
-        <label for="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username">
-
-        <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password">
-
-        <label for="password">Confirm Password</label>
-        <input type="password" placeholder="Confirm Password" id="password">
-
-        <label for="password">Phone No</label>
-        <input type="password" placeholder="Enter your mobile No." id="password">
-
-        <label for="password">Role</label>
-        <select>
-            <option value="User">User</option>
-            <option value="RestaurantOwner">RestaurantOwner</option>
-        </select>
-        <!-- <input type="password" placeholder="Enter your mobile No." id="password"> -->
-        <h2>Address</h2>
-        <label for="password">Building Name</label>
-        <input type="password" placeholder="Enter your Building Name" id="password">
-
-        <label for="password">Flat No.</label>
-        <input type="password" placeholder="Enter your Flat No." id="password">
-
-        <label for="password">Street Name</label>
-        <input type="password" placeholder="Enter your Street Name" id="password">
-
-        <label for="password">City</label>
-        <input type="password" placeholder="Enter your City" id="password">
-
-        <label for="password">State</label>
-        <input type="password" placeholder="Enter your State" id="password">
-
-        <label for="password">Pincode</label>
-        <input type="password" placeholder="Enter your Pincode" id="password">
-
+        <div class="flex">
+            <div class="inline">
+                <label class="inline">First Name</label>
+                <input matInput type="text" placeholder="Enter your first Name" class="block">
+            </div>
+    
+            <div>
+                <label class="inline">LastName</label>
+                <input type="text" placeholder="Enter your last Name" class="block">
+            </div>
+    
+            <label class="inline">Username</label>
+            <input type="text" placeholder="Email or Phone" class="inline">
+    
+            <label class="inline">Password</label>
+            <input type="password" placeholder="Password" class="inline">
+    
+            <label class="inline">Confirm Password</label>
+            <input type="password" placeholder="Confirm Password" class="inline">
+    
+            <label class="inline">Phone No</label>
+            <input type="tel" placeholder="Enter your mobile No." class="inline">
+    
+            <label class="inline">Role</label>
+            <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1">User</mat-radio-button>
+                <mat-radio-button value="2">Restaurant-Owner</mat-radio-button>
+              </mat-radio-group>
+            <!-- <input type="password" placeholder="Enter your mobile No." id="password"> -->
+            <h2>Address</h2>
+            <label class="inline">Building Name</label>
+            <input type="password" placeholder="Enter your Building Name" class="inline">
+    
+            <label class="inline">Flat No.</label>
+            <input type="number" placeholder="Enter your Flat No." class="inline">
+    
+            <label class="inline">Street Name</label>
+            <input type="text" placeholder="Enter your Street Name" class="inline">
+    
+            <label class="inline">City</label>
+            <input type="text" placeholder="Enter your City" class="inline">
+    
+            <label class="inline">State</label>
+            <mat-select>select your State
+                <mat-option value="1">1</mat-option>
+            </mat-select>
+            <!-- <input type="text" placeholder="Enter your State" class="inline"> -->
+    
+            <label class="inline">Pincode</label>
+            <input type="number" placeholder="Enter your Pincode" class="inline">
+    
+        </div>
         <button>Register</button>
     </form>
 </body>
