@@ -191,12 +191,9 @@
     box-shadow: inset 250px 0 0 0 #080909;
 }
 
-
-
-.form{
-    margin-left: 35%;
-    margin-top: 200px;
-}
-form{
-    display: inline;
+.bg{
+    /* background-color: rgb(180, 171, 171); */
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy2RE9HOSKjNrvAbIOGdwA4xX-pNRrGW-364PulIjBaZSsDcAwuRmli9qWU5iVQEUxiGM&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
