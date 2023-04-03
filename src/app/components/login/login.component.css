@@ -190,3 +190,13 @@
     color: #ffffff;
     box-shadow: inset 250px 0 0 0 #080909;
 }
+
+
+
+.form{
+    margin-left: 35%;
+    margin-top: 200px;
+}
+form{
+    display: inline;
+}
