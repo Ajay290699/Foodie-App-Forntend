@@ -22,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
 import { CardsComponent } from './components/cards/cards.component';
+import { PaymentComponent } from './components/payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { CardsComponent } from './components/cards/cards.component';
     FooterComponent,
     CuisineCarouselComponent,
     PageNotFoundComponent,
-    CardsComponent
+    CardsComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
