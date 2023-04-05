@@ -21,6 +21,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
+import { CardsComponent } from './cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MatRadioModule} from '@angular/material/radio';
     HeaderComponent,
     FooterComponent,
     CuisineCarouselComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,
