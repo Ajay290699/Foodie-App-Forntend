@@ -1,0 +1,31 @@
+a{
+    text-decoration: none;
+    color: red;
+}
+
+
+.layout{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  label, a{
+    cursor: pointer;
+    user-select: none;
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+    transition: border 0.2s;
+    border-bottom: 5px solid rgba(#8e44ad, 0.2);
+    padding: 3px 2px;
+    /* &:hover{
+      border-bottom-color: #9b59b6;
+    } */
+  }
+
+  input[type="radio"]{
+    display: none;
+  }
