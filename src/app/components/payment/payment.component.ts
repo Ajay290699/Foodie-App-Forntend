@@ -14,7 +14,7 @@ export class PaymentComponent {
   error = "";
   title = 'Razorpay';
   options = {
-    "key": "",
+    "key": "rzp_test_7pxnPtVV1DIWnX",
     "amount": "200",
     "name": "Abhijit Gatade",
     "description": "Web Development",

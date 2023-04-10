@@ -23,6 +23,11 @@ import {MatCardModule} from '@angular/material/card';
 import {MatRadioModule} from '@angular/material/radio';
 import { CardsComponent } from './components/cards/cards.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { CartComponent } from './components/cart/cart.component';
+import { FavouriteComponent } from './components/favourite/favourite.component';
+import { UserLoginHeaderComponent } from './components/user-login-header/user-login-header.component';
+import { UserLoginDashboardComponent } from './components/user-login-dashboard/user-login-dashboard.component';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +40,12 @@ import { PaymentComponent } from './components/payment/payment.component';
     CuisineCarouselComponent,
     PageNotFoundComponent,
     CardsComponent,
-    PaymentComponent
+    PaymentComponent,
+    CartComponent,
+    FavouriteComponent,
+    UserLoginHeaderComponent,
+    UserLoginDashboardComponent,
+    ForgetPasswordComponent
   ],
   imports: [
     BrowserModule,
