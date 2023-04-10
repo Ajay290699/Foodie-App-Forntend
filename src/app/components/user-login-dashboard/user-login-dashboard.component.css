@@ -2,30 +2,33 @@ a{
     text-decoration: none;
     color: red;
 }
+.searchbar{
+    margin-left: 33%;
+    /* margin-top: 100px; */
+}
+.searchbar input{
+    width: 500px;
+    margin-top: 100px;
+    border-radius: 10px;
+}
 
+.background{
+    background-image: url(https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=600);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.carousel h1{
+    font-size: 50px;
+    margin-top: 50px;
+    margin-left: 170px;
+}
 
-.layout{
-    display: grid;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    grid-template-rows: 50px 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  label, a{
-    cursor: pointer;
-    user-select: none;
-    text-decoration: none;
+.card >img{
+    width: 20px;
+    height: 20px;
+}
+.card{
+    border: 1px solid black;
     display: inline-block;
-    color: inherit;
-    transition: border 0.2s;
-    border-bottom: 5px solid rgba(#8e44ad, 0.2);
-    padding: 3px 2px;
-    /* &:hover{
-      border-bottom-color: #9b59b6;
-    } */
-  }
-
-  input[type="radio"]{
-    display: none;
-  }
+}
