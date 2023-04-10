@@ -10,7 +10,24 @@ a{
     width: 500px;
     margin-top: 100px;
     border-radius: 10px;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
+.searchbar button{
+    padding: 5px;
+    border-radius: 10px;
+    width: 40px;
+    background-color: white;
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+   -ms-transform: translate(-50%, -50%); */
+}
+
 
 .background{
     background-image: url(https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=600);
@@ -25,10 +42,18 @@ a{
 }
 
 .card >img{
-    width: 20px;
-    height: 20px;
+    /* width: 20px;
+    height: 20px; */
+    height: 150px;
+    width: 100%;
 }
 .card{
     border: 1px solid black;
     display: inline-block;
+    width: 300px;
+    /* position: relative; */
 }
+/* .card> button> icon:hover{
+    color: red;
+    background-color: green;
+} */
