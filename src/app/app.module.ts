@@ -28,6 +28,9 @@ import { FavouriteComponent } from './components/favourite/favourite.component';
 import { UserLoginHeaderComponent } from './components/user-login-header/user-login-header.component';
 import { UserLoginDashboardComponent } from './components/user-login-dashboard/user-login-dashboard.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { RestaurantSignupComponent } from './components/restaurant-signup/restaurant-signup.component'; 
+import { RestaurantLoginComponent } from './components/restaurant-login/restaurant-login.component'; 
+import { RestaurantDashboardComponent } from './components/restaurant-dashboard/restaurant-dashboard.component';
 
 
 @NgModule({
@@ -46,7 +49,10 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
     FavouriteComponent,
     UserLoginHeaderComponent,
     UserLoginDashboardComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+    RestaurantSignupComponent,
+    RestaurantLoginComponent,
+    RestaurantDashboardComponent
   ],
   imports: [
     BrowserModule,
