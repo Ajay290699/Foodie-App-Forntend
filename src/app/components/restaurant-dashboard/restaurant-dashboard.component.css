@@ -1,0 +1,9 @@
+.addDish{
+    display: inline-block;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 39%;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px 5px grey;
+    margin-bottom: 100px;
+}
