@@ -10,6 +10,7 @@ import { RestaurantSignupComponent } from './components/restaurant-signup/restau
 import { RestaurantDashboardComponent } from './components/restaurant-dashboard/restaurant-dashboard.component';
 import { CartComponent } from './components/cart/cart.component';
 import { FavouriteComponent } from './components/favourite/favourite.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {path:'home', component:HomeComponent},
@@ -21,7 +22,9 @@ const routes: Routes = [
   {path:'restaurantRegister',component:RestaurantSignupComponent},
   {path:'restaurantDashboard',component:RestaurantDashboardComponent},
   {path:'cart',component:CartComponent},
-  {path:'favourite',component:FavouriteComponent}
+  {path:'favourite',component:FavouriteComponent},
+  {path:'',redirectTo:'/home',pathMatch:'full'},
+  {path:'**',component:PageNotFoundComponent}
 ];
 
 @NgModule({
