@@ -1,1 +1,72 @@
-<p>cart works!</p>
+<body>
+    <app-header></app-header>
+    <!-- <div class="emptyCart" *ngIf="cartItem.length ==0">  -->
+             <div class="emptyCart" style=" display: flex; justify-content: center; align-items: center;">
+        <div class="card" style=" width: fit-content; margin: 50px;  padding: 24px;" >
+    
+        <div class="center">
+          <img style="height: 300px;"  src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-5521508-4610092.png" alt="">
+          <h1 style=" text-align: center; color: red;">Your Cart is Empty</h1>
+          <h2 style="font-size: large; text-align: center; line-height: 20px;">You can go to home page to <br> view more restaurants</h2>
+          <button routerLink="/home" class="order" style="width: 100%; height: 30px; border: whitesmoke 2px solid; color: whitesmoke; background-color: red;" >Order Now</button>
+        </div>
+        </div>
+             </div>
+             
+          <!-- <div class="container" *ngIf="cartItem.length !=0"> -->
+            <div style="width: 100%;">
+            <div >
+              <table class="item-table" style="background-color: aqua;width: 100%">
+                <thead>
+                  <tr>
+                    <th>Food Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                  </tr>
+                </thead>
+            
+              </table>
+            </div>
+            <div class="finalCartDetails">
+              <table class="finalCart-table">
+                <thead>
+                  <tr>
+                    <th>Cart Summary</th>
+                  </tr>
+                </thead>
+                <tbody class="finalCart-tbody">
+                  <tr>
+                    <td>Total Amount</td>
+              
+                  </tr>
+                  <tr>
+                    <td>Total Food Items</td>
+                   
+                  </tr>
+                  <tr>
+                    <td>Delivery Charge</td>
+                    <td>0.00</td>
+                  </tr>
+                  <tr>
+                    <td>Discount</td>
+                    <td>15%</td>
+                  </tr>
+                  <tr>
+                   <hr>
+                  </tr>
+                  <tr>
+                    <th>Grand Total</th>
+              
+                  </tr>
+                  <tr class="btn-tr">
+                    <button >clear cart</button>
+                    <button >Place Order</button>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <app-footer></app-footer>
+        </body>
