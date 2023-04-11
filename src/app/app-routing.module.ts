@@ -11,6 +11,8 @@ import { RestaurantDashboardComponent } from './components/restaurant-dashboard/
 import { CartComponent } from './components/cart/cart.component';
 import { FavouriteComponent } from './components/favourite/favourite.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { PaymentComponent } from './components/payment/payment.component';
 
 const routes: Routes = [
   {path:'home', component:HomeComponent},
@@ -23,6 +25,8 @@ const routes: Routes = [
   {path:'restaurantDashboard',component:RestaurantDashboardComponent},
   {path:'cart',component:CartComponent},
   {path:'favourite',component:FavouriteComponent},
+  {path:'payment',component:PaymentComponent},
+  {path:'forgetPassword',component:ForgetPasswordComponent},
   {path:'',redirectTo:'/home',pathMatch:'full'},
   {path:'**',component:PageNotFoundComponent}
 ];

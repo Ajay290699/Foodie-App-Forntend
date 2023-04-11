@@ -51,14 +51,14 @@
   }
   
   .marquee__content {
-    padding: 2rem 0px;
+    padding: 1rem 0px;
     display: inline-block;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     padding-right: 100%;
     animation: marquee 500s linear infinite;
     /* border: none; */
     border-top: 10px dotted white;
-    border-bottom: 10px dotted white;
+    /* border-bottom: 10px dotted white; */
     /* border-image: repeating-linear-gradient(
           to bottom,
           transparent 10px,
@@ -70,7 +70,7 @@
     font-weight: bold;
     /* overflow: hidden; */
     color: white;
-    font-size: 3rem;
+    font-size: 15px;
     height: 100%;
     width: 500%;
   
@@ -85,7 +85,7 @@
     margin-top: -100px;
   }
   .mt{
-    margin-top: 400px;
+    margin-top: 267px;
   }
   .card{
     margin-top: -50px;
