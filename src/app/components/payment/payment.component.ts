@@ -14,7 +14,7 @@ export class PaymentComponent {
   error = "";
   title = 'Razorpay';
   options = {
-    "key": "rzp_test_bn50nxzboeDRDg",
+    "key": "",
     "amount": "200",
     "name": "Abhijit Gatade",
     "description": "Web Development",
@@ -46,6 +46,7 @@ export class PaymentComponent {
   paynow() {
     this.paymentId = '';
     this.error = '';
+    this.options.key="rzp_test_TOmPYv7WhstvC8";
     this.options.amount = "200"; //paise
     this.options.prefill.name = "Abcd";
     this.options.prefill.email = "abcd@gmail.com";
