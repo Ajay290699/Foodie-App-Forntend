@@ -14,6 +14,6 @@ export class User {
     state?:string;
     pincode?:number;
     
-    address?:UserAddress[];
+    // address?:UserAddress[];
     favourites?:Favourite[];
 }

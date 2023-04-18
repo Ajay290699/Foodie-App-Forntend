@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -6,5 +7,52 @@ import { Component } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
+
+  signupForm= new FormGroup({
+    'firstName': new FormControl('',Validators.required),
+    'lastName':new FormControl('',Validators.required),
+    'email':new FormControl('',[Validators.required,Validators.email]),
+    'password':new FormControl('',[Validators.required,Validators.pattern('^[A-Za-z0-9._%+-]{8,}')]),  
+     'mobileNo':new FormControl('',Validators.pattern(/^[789]\d{9,9}$/)),
+     'buildingName':new FormControl('',Validators.required),
+     'streetName':new FormControl('',Validators.required),
+     'city':new FormControl('',Validators.required),
+     'state':new FormControl('',Validators.required),
+     'flatNo':new FormControl('',Validators.required),
+     'pincode':new FormControl('',Validators.required),
+     'image':new FormControl('',Validators.required)
+       
+  })
+ 
+
+  sendSignupData(){
+          
+  }
+  
+
+  get firstName() { return this.signupForm.get("firstName") }
+
+  get lastName() { return this.signupForm.get("lastName") }
+
+  get email() { return this.signupForm.get("email") }
+
+  get password() { return this.signupForm.get("password"); }
+
+  get mobileNo(){ return this.signupForm.get("mobileNo");}
+
+  get buildingName() { return this.signupForm.get("buildingName"); }
+
+  get streetName() { return this.signupForm.get("streetName"); }
+
+  get city() { return this.signupForm.get("city"); }
+
+  get state() { return this.signupForm.get("state"); }
+
+  get flatNo() { return this.signupForm.get("flatNo"); }
+
+  get pincode() { return this.signupForm.get("pincode"); }
+
+  get image() { return this.signupForm.get("image"); }
+
 
 }

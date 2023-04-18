@@ -1,206 +1,120 @@
-<!-- <app-header></app-header>
-<body class="image">
-    <form>
-        <h3>New Registration</h3>
-
-        <div class="flex">
-            <div class="inline">
-                <label class="inline">First Name</label>
-                <input matInput type="text" placeholder="Enter your first Name" class="block">
-            </div>
-    
-            <div>
-                <label class="inline">LastName</label>
-                <input type="text" placeholder="Enter your last Name" class="block">
-            </div>
-    
-            <label class="inline">Username</label>
-            <input type="text" placeholder="Email or Phone" class="inline">
-    
-            <label class="inline">Password</label>
-            <input type="password" placeholder="Password" class="inline">
-    
-            <label class="inline">Confirm Password</label>
-            <input type="password" placeholder="Confirm Password" class="inline">
-    
-            <label class="inline">Phone No</label>
-            <input type="tel" placeholder="Enter your mobile No." class="inline">
-    
-            <label class="inline">Role</label>
-            <mat-radio-group aria-label="Select an option">
-                <mat-radio-button value="1">User</mat-radio-button>
-                <mat-radio-button value="2">Restaurant-Owner</mat-radio-button>
-              </mat-radio-group>
-            <h2>Address</h2>
-            <label class="inline">Building Name</label>
-            <input type="password" placeholder="Enter your Building Name" class="inline">
-    
-            <label class="inline">Flat No.</label>
-            <input type="number" placeholder="Enter your Flat No." class="inline">
-    
-            <label class="inline">Street Name</label>
-            <input type="text" placeholder="Enter your Street Name" class="inline">
-    
-            <label class="inline">City</label>
-            <input type="text" placeholder="Enter your City" class="inline">
-    
-            <label class="inline">State</label>
-            <mat-select>select your State
-                <mat-option value="1">1</mat-option>
-            </mat-select>
-    
-            <label class="inline">Pincode</label>
-            <input type="number" placeholder="Enter your Pincode" class="inline">
-    
-        </div>
-        <button>Register</button>
-    </form>
-</body>
-<app-footer></app-footer> -->
-
-
-
-<!-- saumya -->
-<!-- 
-<body class="image">
-    <form style="height: fit-content;" style="margin-top: 200px;">
-        <h3>New Registration</h3>
-
-        <div class="flex">
-            <div class="row" style="display: flex; height: 100%;" >
-            <div class="col-6" style="width: 100%; margin-right: 2px;">
-                <label >First Name</label>
-                <input matInput type="text" placeholder="Enter your first Name" class="block">
-            </div>
-    
-            <div class="col-6" style="width: 100%; margin-left: 2px;">
-                <label class="inline">LastName</label>
-                <input type="text" placeholder="Enter your last Name" class="block">
-            </div>
-        </div>
-            <label class="inline">Email Id</label>
-            <input type="text" placeholder="Email or Phone" class="inline">
-    
-            <label class="inline">Password</label>
-            <input type="password" placeholder="Password" class="inline">
-    
-            <label class="inline">Confirm Password</label>
-            <input type="password" placeholder="Confirm Password" class="inline">
-    
-            <label class="inline">Phone No</label>
-            <input type="tel" placeholder="Enter your mobile No." class="inline">
-            <h1>Address</h1>
-            <div class="row" style="display: flex; height: 100%;">
-            <div class="col-4" style="width: 100%; margin-right: 2px;">
-            <label class="inline">Building Name</label>
-            <input type="password" placeholder="Enter your Building Name" class="inline">
-             </div>
-            <div class="col-4" style="width: 100%; margin-left: 2px;">
-            <label class="inline">Flat No.</label>
-            <input type="number" placeholder="Enter your Flat No." class="inline">
-        </div>
-            <div class="col-4" style="width: 100%; margin-left: 2px;">
-            <label class="inline">Street Name</label>
-            <input type="text" placeholder="Enter your Street Name" class="inline">
-        </div>
-            </div>
-
-            <div class="row" style="display: flex; height: 100%;">
-                <div class="col-4" style="width: 100%; margin-right: 2px;">
-            <label class="inline">City</label>
-            <input type="text" placeholder="Enter your City" class="inline">
-            </div>
-            <div class="col-4" style="width: 100%; margin-left: 2px;">
-            <label class="inline">State</label>
-            <mat-select>select your State
-                <mat-option value="1">1</mat-option>
-            </mat-select>
-            </div>
-        
-            <div class="col-4" style="width: 100%; margin-left: 2px;">
-            <label class="inline">Pincode</label>
-            <input type="number" placeholder="Enter your Pincode" class="inline">
-    </div>
-        </div>
-        </div>
-        <button>Register</button>
-    </form>
-</body> -->
-
-
-<body class="image">
+ <body class="image">
     <app-header></app-header>
-    <form style="height: 1000px;" style="margin-top: 150px;">
+    <form  class="form"  (ngSubmit)="sendSignupData()" [formGroup]="signupForm">
         <div class="container">
         <h3>New Registration</h3>
 
-         <div class="div1">
-            <div>
-                <label >First Name</label>
-                <input style="width: 320px;" matInput type="text" placeholder="Enter your first Name" class="block">
-            </div>
     
-            <div style="margin-left: 80px;">
-                <label >LastName</label>
-                <input style="width: 320px;" type="text" placeholder="Enter your last Name" class="block">
-            </div>
-        </div>
-       
-            <label >Email Id</label>
-            <input type="text" placeholder="Email or Phone">
+           
+<div style="display: flex;justify-content: space-evenly; width: 100%;">
+                        <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
+                            <input matInput type="text" placeholder="First Name" id="firstName" formControlName="firstName">
+                        <mat-error *ngIf="firstName?.errors?.['required']" style="color: red;">
+                            First Name is required.
+                        </mat-error>
+                      
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
+                        <input matInput type="text" placeholder="Last Name" id="lastName"
+                            formControlName="lastName">
+                            <mat-error *ngIf="lastName?.errors?.['required']" style="color: red;">
+                                Last Name is required.
+                            </mat-error>
+                    </mat-form-field>
+                </div>
     
 
-            <label >Password</label>
-            <input type="password" placeholder="Password">
-    
-            <label >Confirm Password</label>
-            <input type="password" placeholder="Confirm Password">
-        
-            <label >Phone No</label>
-            <input type="tel" placeholder="Enter your mobile No." class="inline">
-            <h1>Address</h1>
-        <div class="div2">
-            <div>
-            <label >Building Name</label>
-            <input  style="width: 200px;" type="password" placeholder="Enter your Building Name" class="inline">
-             </div>
-            <div style="margin-left: 50px;">
-            <label  >Flat No.</label>
-            <input style="width: 200px;" type="number" placeholder="Enter your Flat No." class="inline">
+        <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
+            <input matInput placeholder="abc@gmail.com"  type="email" id="email" formControlName="email" />
+            <mat-error *ngIf="email?.errors?.['required']" style="color: red;">
+                Email is required.
+            </mat-error>
+            <mat-error *ngIf="email?.errors?.['email']" style="color: red;">
+               Enter Valid Email.
+            </mat-error>
+        </mat-form-field>
+       
+
+     <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
+        <input matInput type="password" placeholder="Password" id="password" formControlName="password">
+    <mat-error *ngIf="password?.errors?.['required']" style="color: red;">
+        Password is required.
+    </mat-error>
+    <mat-error *ngIf="password?.errors?.['pattern']" style="color: red;">
+        Password should have min 8 letter password, with at least a symbol, upper and lower case letters
+        and a number.
+    </mat-error>
+
+</mat-form-field>
+          
+         <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
+            <input matInput type="tel" placeholder="Phone Number" id="mobileNo" formControlName="mobileNo">
+            <mat-error *ngIf="mobileNo?.errors?.['pattern']" style="color: red;">
+                Valid phone number contains 10 digits starting with 7/8/9
+            </mat-error>
+        </mat-form-field>
+           <h1>Address</h1>
+            <div style="display: flex;justify-content: space-evenly; width: 100%;">
+               
+                <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
+                    <input matInput type="text" placeholder="Building Name" id="buildingName"
+                        formControlName="buildingName">
+                        <mat-error *ngIf="buildingName?.errors?.['required']" style="color: red;">
+                            Building Name is required.
+                        </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
+                    <input matInput type="number" placeholder="Flat No." id="city"
+                        formControlName="flatNo">
+                        <mat-error *ngIf="flatNo?.errors?.['required']" style="color: red;">
+                            flatNo  is required.
+                        </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
+                    <input matInput type="text" placeholder="Street Name" id="streetName"
+                        formControlName="streetName">
+                        <mat-error *ngIf="streetName?.errors?.['required']" style="color: red;">
+                            street Name is required.
+                        </mat-error>
+                </mat-form-field>
+                </div>
+          
+            <div style="display: flex;justify-content: space-evenly; width: 100%;">
+               
+            <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
+                <input matInput type="text" placeholder="City" id="city"
+                    formControlName="city">
+                    <mat-error *ngIf="city?.errors?.['required']" style="color: red;">
+                        City Name is required.
+                    </mat-error>
+            </mat-form-field>
+           <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;">  
+                <mat-label>state</mat-label>  
+                <select matNativeControl required>  
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Japan">Japan</option> 
+                </select>  
+              </mat-form-field>  
+            <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
+                <input matInput type="text" placeholder="Pincode" id="pincode"
+                    formControlName="streetName">
+                    <mat-error *ngIf="pincode?.errors?.['required']" style="color: red;">
+                        Pincode is required.
+                    </mat-error>
+            </mat-form-field>
+      
     </div>
-            <div style="margin-left: 50px;">
-            <label>Street Name</label>
-            <input style="width: 200px;"  type="text" placeholder="Enter your Street Name" class="inline">
-        </div>
-    </div>
-            <div  class="div2">
-                <div >
-            <label >City</label>
-            <input style="width: 200px;" type="text" placeholder="Enter your City" class="inline">
-            </div >
-            <div style="margin-left: 50px;">
-                <label>State</label>
-                <select style="background-color: rgba(255,255,255,0.07); height: 49px; width: 200px; margin-top: 10px;"><option value="select your State"></option>
-                <option value="Delhi">Delhi</option>
-                <option value="Mumbai">Mumbai</option>
-                <option value="Karnataka">Karnataka</option>
-                <option value="Japan">Japan</option>
-                <option value="Delhi">Delhi</option>
-                <option value="Mumbai">Mumbai</option>
-                <option value="Karnataka">Karnataka</option>
-                <option value="Japan">Japan</option>
-            </select>
-            </div>
-        
-            <div style="margin-left: 50px;">
-                <label >Pincode</label>
-                <input style="width: 200px;" type="number" placeholder="Enter your Pincode" class="inline">
-             </div>
-        </div>
+           
         <label>Profile Image Upload</label>
-        <input style="padding-top: 10px;" type="file" placeholder="No file chosen">
+        <input style="padding-top: 10px;" type="file" class="form-control" formControlName="image" placeholder="No file chosen">
     
-        <button>Register</button>
+        <button   type="submit" [disabled]="!signupForm.valid">Register</button>
       </div>
     </form>
 </body>
