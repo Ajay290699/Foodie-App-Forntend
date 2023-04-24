@@ -31,6 +31,7 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
 import { RestaurantSignupComponent } from './components/restaurant-signup/restaurant-signup.component'; 
 import { RestaurantLoginComponent } from './components/restaurant-login/restaurant-login.component'; 
 import { RestaurantDashboardComponent } from './components/restaurant-dashboard/restaurant-dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -52,13 +53,14 @@ import { RestaurantDashboardComponent } from './components/restaurant-dashboard/
     ForgetPasswordComponent,
     RestaurantSignupComponent,
     RestaurantLoginComponent,
-    RestaurantDashboardComponent
+    RestaurantDashboardComponent,
+    HttpClientModule
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,MatToolbarModule,MatIconModule,MatTabsModule,MatButtonModule,MatInputModule,MatSelectModule,
-    FormsModule,MatCardModule,ReactiveFormsModule,MatRadioModule
+    FormsModule,MatCardModule,ReactiveFormsModule,MatRadioModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
