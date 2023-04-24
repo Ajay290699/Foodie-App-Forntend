@@ -13,3 +13,8 @@ a{
 .example-spacer {
     flex: 1 1 auto;
   }
+.image{
+    border-radius: 50%;
+    height: 40px;
+    width: 50px;
+}
