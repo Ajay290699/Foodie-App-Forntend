@@ -53,8 +53,7 @@ import { HttpClientModule } from '@angular/common/http';
     ForgetPasswordComponent,
     RestaurantSignupComponent,
     RestaurantLoginComponent,
-    RestaurantDashboardComponent,
-    HttpClientModule
+    RestaurantDashboardComponent
   ],
   imports: [
     BrowserModule,

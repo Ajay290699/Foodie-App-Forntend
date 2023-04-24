@@ -13,7 +13,7 @@
                             <div class="col-md-6 col-lg-7 d-flex align-items-center">
                                 <div class="card-body p-4 p-lg-5 text-black">
                                     <!-- [formGroup]="signupForm" (ngSubmit)="sendSignupData()" -->
-                                    <form>
+                                    <form [formGroup]="signupForm">
 
                                         <div class="d-flex align-items-center mb-3 pb-1">
                                             <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
@@ -24,6 +24,14 @@
                                             <input type="email" formControlName="emailId"
                                                 class="form-control form-control-lg" />
                                             <label class="form-label">Email address</label>
+                                            <div *ngIf="signupForm.controls.email.invalid && (signupForm.controls.email.dirty || signupForm.controls.email.touched)">
+                                                <small class="text-danger" *ngIf="signupForm.controls.email.errors.required">
+                                                  Email is required
+                                                </small>
+                                                <small class="text-danger" *ngIf="signupForm.controls.email.errors.email">
+                                                  Invalid email format
+                                                </small>
+                                              </div>
                                         </div>
 
                                         <div class="form-outline mb-4">
@@ -31,11 +39,11 @@
                                                 class="form-control form-control-lg" />
                                             <label class="form-label" for="form2Example17">Name of the Owner</label>
                                         </div>
-                                        <div class="form-outline mb-4">
+                                        <!-- <div class="form-outline mb-4">
                                             <input type="text" formControlName="restName"
                                                 class="form-control form-control-lg" />
                                             <label class="form-labe">Restaurant Name</label>
-                                        </div>
+                                        </div> -->
 
                                         <div class="form-outline mb-4">
                                             <input type="password" formControlName="password"
@@ -43,11 +51,11 @@
                                             <label class="form-label">Password</label>
                                         </div>
 
-                                        <div class="form-outline mb-4">
+                                        <!-- <div class="form-outline mb-4">
                                             <input type="text" formControlName="address"
                                                 class="form-control form-control-lg" />
                                             <label class="form-label">Address</label>
-                                        </div>
+                                        </div> -->
 
                                         <div class="pt-1 mb-4">
                                             <button class="btn btn-dark btn-lg btn-block">
