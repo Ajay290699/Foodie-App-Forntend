@@ -1,3 +1,47 @@
-.footer{
-    margin-top: 150px;
+.input{
+    width: 400px;
+    max-width: 400px;
+}
+#form{
+    display: inline-block;
+    background-color: black;
+    padding: 50px;
+}
+h1{
+    color: white;
+    font-weight: 600;
+    margin-left: 80px;
+    margin-bottom: 50px;
+}
+h4{
+    margin-top: 30px;
+    color: white;
+}
+button{
+    width: 400px;
+    padding: 30px;
+}
+button:hover{
+    background-color: rgb(160, 244, 160);
+}
+img{
+    height: 100px;
+    width: 100px;
+    margin-left: 140px;
+}
+.main{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 350px;
+
+}
+.sideImg{
+    background-color: grey;
+    width: 400px;
+}
+.img1{
+    margin-left: 5px;
+    height: 640px;
+    width: 390px;
+    padding: 10px;
 }

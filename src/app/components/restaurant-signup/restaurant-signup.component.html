@@ -1,80 +1,49 @@
-<!-- <app-header></app-header> -->
-<div class="container">
-    <section class="vh-100" style="background-color: #9A616D;">
-        <div class="container py-5 h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col col-xl-10">
-                    <div class="card" style="border-radius: 1rem;">
-                        <div class="row g-0">
-                            <div class="col-md-6 col-lg-5 d-none d-md-block">
-                                <img src="https://images.unsplash.com/photo-1654922207993-2952fec328ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-                                    alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
-                            </div>
-                            <div class="col-md-6 col-lg-7 d-flex align-items-center">
-                                <div class="card-body p-4 p-lg-5 text-black">
-                                    <!-- [formGroup]="signupForm" (ngSubmit)="sendSignupData()" -->
-                                    <form [formGroup]="signupForm">
-
-                                        <div class="d-flex align-items-center mb-3 pb-1">
-                                            <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
-                                            <span class="h1 fw-bold mb-0">Register in Foodie</span>
-                                        </div>
-
-                                        <div class="form-outline mb-4">
-                                            <input type="email" formControlName="emailId"
-                                                class="form-control form-control-lg" />
-                                            <label class="form-label">Email address</label>
-                                            <div *ngIf="signupForm.controls.email.invalid && (signupForm.controls.email.dirty || signupForm.controls.email.touched)">
-                                                <small class="text-danger" *ngIf="signupForm.controls.email.errors.required">
-                                                  Email is required
-                                                </small>
-                                                <small class="text-danger" *ngIf="signupForm.controls.email.errors.email">
-                                                  Invalid email format
-                                                </small>
-                                              </div>
-                                        </div>
-
-                                        <div class="form-outline mb-4">
-                                            <input type="text" id="form2Example17" formControlName="ownerName"
-                                                class="form-control form-control-lg" />
-                                            <label class="form-label" for="form2Example17">Name of the Owner</label>
-                                        </div>
-                                        <!-- <div class="form-outline mb-4">
-                                            <input type="text" formControlName="restName"
-                                                class="form-control form-control-lg" />
-                                            <label class="form-labe">Restaurant Name</label>
-                                        </div> -->
-
-                                        <div class="form-outline mb-4">
-                                            <input type="password" formControlName="password"
-                                                class="form-control form-control-lg" />
-                                            <label class="form-label">Password</label>
-                                        </div>
-
-                                        <!-- <div class="form-outline mb-4">
-                                            <input type="text" formControlName="address"
-                                                class="form-control form-control-lg" />
-                                            <label class="form-label">Address</label>
-                                        </div> -->
-
-                                        <div class="pt-1 mb-4">
-                                            <button class="btn btn-dark btn-lg btn-block">
-                                                Sign Up</button>
-                                        </div>
-
-                                        <p class="mb-5 pb-lg-2" style="color: #393f81;">Already registered?<a href="#!"
-                                                style="color: #393f81;">Click here</a></p>
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<body>
+    <div class="main">
+        <div class="sideImg">
+            <img class="img1" src="https://images.unsplash.com/photo-1654922207993-2952fec328ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hlZnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="">
         </div>
-    </section>
-</div>
-<div class="footer">
-    <app-footer></app-footer>
-</div>
+        <div>
+            <form id="form" [formGroup]="signupForm">
+                <img src="../../../assets/images/fork.png" alt="#">
+                <h1>Register with Foodie</h1>
+                <div>
+                    <mat-form-field class="input"  >
+                        <input type="email" placeholder="Email Address" matInput formControlName="emailId">
+                        <mat-error *ngIf="emailId?.errors?.['required']" style="color: red;">
+                            Email is required.
+                        </mat-error>
+                        <mat-error *ngIf="emailId?.errors?.['email']" style="color: red;">
+                           Enter Valid Email.
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            
+                <div>
+                    <mat-form-field class="input" >
+                        <input type="text" placeholder="Restaurant Owner Name" matInput formControlName="ownerName">
+                        <mat-error *ngIf="ownerName?.errors?.['required']" style="color: red;">
+                            Owner Name is required.
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            
+                <div>
+                    <mat-form-field class="input" >
+                        <input type="email" placeholder="Password" matInput formControlName="password">
+                        <mat-error *ngIf="password?.errors?.['required']" style="color: red;">
+                            Password is required.
+                        </mat-error>
+                        <mat-error *ngIf="password?.errors?.['pattern']" style="color: red;">
+                            Password should have min 8 letter password, with at least a symbol, upper and lower case letters
+                            and a number.
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+        
+                <button mat-raised-button color="accent">Register</button> 
+                <h4>if already registered ? <a href="">click here</a> </h4>
+            </form>
+        </div>
+    </div>
+</body>

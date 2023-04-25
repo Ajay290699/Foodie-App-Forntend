@@ -11,8 +11,9 @@ export class RestaurantSignupComponent {
   constructor(private fb:FormBuilder){}
 
   signupForm = new FormGroup({
-    // emailId:['',[Validators.required, Validators.email]]
-    'emailId':new FormControl('',[Validators.required, Validators.email])
+    'emailId':new FormControl('',[Validators.required, Validators.email]),
+    'ownerName':new FormControl('',[Validators.required]),
+    'password': new FormControl('',[Validators.required,Validators.pattern('^[A-Za-z0-9._%+-]{8,}')])
   })
 
   get emailId(){
