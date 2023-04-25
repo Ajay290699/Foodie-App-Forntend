@@ -1,0 +1,36 @@
+.main{
+    display: flex;
+}
+.input{
+    width: 400px;
+}
+.login{
+    padding: 100px;
+    background-color: rgb(79, 77, 77);
+    width: 800px;
+}
+.head{
+    display: flex;
+    background-color: black;
+}
+.head h1{
+    color: white;
+    font-size: 50px;
+    margin-top: 30px;
+}
+h1{
+    color: rgba(28, 230, 196, 0.927);
+    font-size: 34px;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+button{
+    width: 400px;
+    margin-bottom: 50px;
+}
+button:hover{
+    background-color: rgb(123, 208, 245);
+}
+p,a{
+    color: white;
+}
