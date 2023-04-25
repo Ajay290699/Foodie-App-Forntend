@@ -4,7 +4,7 @@
             <img class="img1" src="https://images.unsplash.com/photo-1654922207993-2952fec328ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hlZnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="">
         </div>
         <div>
-            <form id="form" [formGroup]="signupForm">
+            <form id="form" [formGroup]="signupForm" (ngSubmit)="sendData()">
                 <img src="../../../assets/images/fork.png" alt="#">
                 <h1>Register with Foodie</h1>
                 <div>
@@ -34,9 +34,8 @@
                         <mat-error *ngIf="password?.errors?.['required']" style="color: red;">
                             Password is required.
                         </mat-error>
-                        <mat-error *ngIf="password?.errors?.['pattern']" style="color: red;">
-                            Password should have min 8 letter password, with at least a symbol, upper and lower case letters
-                            and a number.
+                        <mat-error *ngIf="password?.errors?.['minlength']" style="color: red;">
+                            Password should have min 8 letter password
                         </mat-error>
                     </mat-form-field>
                 </div>

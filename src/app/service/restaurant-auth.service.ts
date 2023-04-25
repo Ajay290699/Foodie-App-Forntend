@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { RestaurantSignUp } from '../model/restaurant/restaurant-sign-up';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,10 +10,11 @@ export class RestaurantAuthService {
 
   constructor(private httpClient:HttpClient) { }
 
-  resAuthUrl = "http://localhost:6000/owner-auth";
+  resAuthUrl = "http://localhost:8181/owner-auth";
 
   restaurantOwnerRegistration(restaurantSignUp:RestaurantSignUp)
   {
+    console.log(restaurantSignUp);
     return this.httpClient.post(this.resAuthUrl+"/sign-in/",restaurantSignUp)
   }
 
