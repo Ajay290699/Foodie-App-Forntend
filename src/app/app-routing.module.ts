@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
@@ -13,6 +13,8 @@ import { FavouriteComponent } from './components/favourite/favourite.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { AddDishesComponent } from './components/add-dishes/add-dishes.component';
+import { AddRestaurantComponent } from './components/add-restaurant/add-restaurant.component';
 
 const routes: Routes = [
   {path:'home', component:HomeComponent},
@@ -26,6 +28,8 @@ const routes: Routes = [
   {path:'cart',component:CartComponent},
   {path:'favourite',component:FavouriteComponent},
   {path:'payment',component:PaymentComponent},
+  {path:'addDish',component:AddDishesComponent},
+  {path:'addRestaurant',component:AddRestaurantComponent},
   {path:'forgetPassword',component:ForgetPasswordComponent},
   {path:'',redirectTo:'/home',pathMatch:'full'},
   {path:'**',component:PageNotFoundComponent}

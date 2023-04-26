@@ -32,9 +32,10 @@ import { RestaurantSignupComponent } from './components/restaurant-signup/restau
 import { RestaurantLoginComponent } from './components/restaurant-login/restaurant-login.component'; 
 import { RestaurantDashboardComponent } from './components/restaurant-dashboard/restaurant-dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AddRestaurantComponent } from './add-restaurant/add-restaurant.component';
+import { AddRestaurantComponent } from './components/add-restaurant/add-restaurant.component';
 import { AddDishesComponent } from './components/add-dishes/add-dishes.component';
 import { UploadUserImageComponent } from './components/upload-user-image/upload-user-image.component';
+import { RestaurantHeaderComponent } from './components/restaurant-header/restaurant-header.component';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { UploadUserImageComponent } from './components/upload-user-image/upload-
     RestaurantDashboardComponent,
     AddRestaurantComponent,
     AddDishesComponent,
-    UploadUserImageComponent
+    UploadUserImageComponent,
+    RestaurantHeaderComponent
   ],
   imports: [
     BrowserModule,

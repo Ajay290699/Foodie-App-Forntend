@@ -1,1 +1,83 @@
-<p>add-dishes works!</p>
+<div>
+    <app-restaurant-header></app-restaurant-header>
+    <div class="containerdashboard">
+        <div id="carouselExampleCaptions" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                class="d-block img" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <p>Enjoy special benefits offered by foodie</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://images.unsplash.com/44/fN6hZMWqRHuFET5YoApH_StBalmainCoffee.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                class="d-block img" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <p>Improve your business with foodie</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                class="d-block img" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+      
+                <p>Receive orders from your area</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="addDish">
+        <main class="form-signin w-100 m-auto">
+          <form>
+            <div style="text-align: center;"><img class="mb-4" src="../../../assets/images/Foodie.png" alt="" width="72" height="57">
+            </div>
+      
+            <h1 class="h3 mb-3 fw-normal">Add Your Dish</h1>
+      
+            <div class="form-floating">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Dish Name</label>
+            </div>
+            <div class="form-floating">
+              <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">Dish Type</label>
+            </div>
+      
+            <div class="form-floating">
+              <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">Price</label>
+            </div>
+            <div class="mb-3">
+              <label for="formFile" class="form-label">Upload picture of dish</label>
+              <input class="form-control" type="file" id="formFile">
+            </div>
+      
+      
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Add dish</button>
+          </form>
+        </main>
+      </div>
+      <app-footer></app-footer>
+</div>
