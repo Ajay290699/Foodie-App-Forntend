@@ -7,3 +7,45 @@
     box-shadow: 2px 4px 4px 5px grey;
     margin-bottom: 100px;
 }
+
+.h1{
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 80px;
+    margin-left: 650px;
+    margin-bottom: 50px;
+}
+h1{
+    font-size: 60px;
+    font-weight: 700;
+    margin-left: 470px; 
+    margin-bottom: 80px;
+}
+h2{
+    background-color: rgb(223, 219, 219);
+    margin-bottom: 50px;
+}
+.card{
+    display: inline-block;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+}
+.pad{
+    padding: 10px;
+}
+
+img{
+    height: 200px;
+    width: 400px;
+}
+.card h2{
+    font-size: 30px;
+    font-weight: 500;
+    background-color: white;
+    margin-bottom: 0;
+}
+.card-container{
+    padding: 30px;
+    margin-bottom: 100px;
+}

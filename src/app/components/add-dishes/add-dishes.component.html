@@ -1,5 +1,13 @@
 <div>
-    <app-restaurant-header></app-restaurant-header>
+    <mat-toolbar class="head">
+        <img src="../../../assets/images/fork.png" alt="">
+        <span>Foodie</span>
+        <span class="example-spacer"></span>
+        <a routerLink="../restaurantDashboard" href=""><mat-icon>dashboard</mat-icon>Dashboard</a>
+        <!-- <a routerLink="../addDish" href=""><mat-icon>add</mat-icon>Add Dish</a> -->
+        <a routerLink="../home" href=""><mat-icon>logout</mat-icon>Logout</a>
+      </mat-toolbar>
+
     <div class="containerdashboard">
         <div id="carouselExampleCaptions" class="carousel slide">
           <div class="carousel-indicators">
@@ -13,7 +21,7 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
-                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?cs=srgb&dl=pexels-chan-walrus-958545.jpg&fm=jpg"
                 class="d-block img" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <p>Enjoy special benefits offered by foodie</p>
@@ -21,7 +29,7 @@
             </div>
             <div class="carousel-item">
               <img
-                src="https://images.unsplash.com/44/fN6hZMWqRHuFET5YoApH_StBalmainCoffee.jpg?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                src="https://media-cldnry.s-nbcnews.com/image/upload/newscms/2019_30/2943911/190723-easy-chow-mein-al-1414.jpg"
                 class="d-block img" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <p>Improve your business with foodie</p>
@@ -29,7 +37,7 @@
             </div>
             <div class="carousel-item">
               <img
-                src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                src="https://images.indianexpress.com/2017/07/biryani1.jpg"
                 class="d-block img" alt="...">
               <div class="carousel-caption d-none d-md-block">
       
@@ -55,6 +63,10 @@
             </div>
       
             <h1 class="h3 mb-3 fw-normal">Add Your Dish</h1>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Restaurant Name</label>
+              </div>
       
             <div class="form-floating">
               <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">

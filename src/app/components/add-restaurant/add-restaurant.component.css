@@ -1,0 +1,29 @@
+.addDish{
+    display: inline-block;
+    padding: 20px;
+    margin-top: 80px;
+    margin-left: 39%;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px 5px grey;
+    margin-bottom: 100px;
+}
+.img{
+    height: 500px;
+    width: 1600px;
+}
+
+img{
+    width: 80px;
+    height: 64px;
+}
+a{
+    color: white;
+    text-decoration: none;
+    margin-left: 50px;
+}
+.head{
+    background-color: black;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
