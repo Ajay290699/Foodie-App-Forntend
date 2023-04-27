@@ -4,7 +4,7 @@
     <h1>Welcome to FoodieApp</h1>
     <h2>Your Restaurant : </h2>
     <button (click)="getAllRestaurant()">get your restaurant</button>
-
+    <!-- {{allRestaurant|JSON}} -->
     <div class="card-container" *ngFor="let restaurant of allRestaurant">
       <div class="card">
         <img src="../../../assets/images/briyani.png" alt="#">

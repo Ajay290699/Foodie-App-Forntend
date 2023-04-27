@@ -11,14 +11,18 @@ export class RestaurantDashboardComponent {
 
   constructor(private restaurantService:RestaurantService){}
 
-  allRestaurant:Restaurant[]=[];
+  allRestaurant:Array<Restaurant> | undefined;
 
   getAllRestaurant(){
     this.restaurantService.getRestaurant().subscribe(
       response=>{
         this.allRestaurant = response as Restaurant[];
+        console.log(response);
       }
-    )
+    ),(error: any)=>{
+      console.log(error)
+    }
+      
   }
 
 }

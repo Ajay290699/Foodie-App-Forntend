@@ -37,14 +37,32 @@ export class AddDishesComponent {
     return this.dishForm.get('dishPrice')
   }
 
-   // const body = JSON.stringify(this.restaurantForm.value)
+   
+
+  //  restaurantName1 = this.restaurantForm.value
+  // sendLoginData(){
+  //   console.log(this.loginForm.value);
+  //   this.resAuthService.restaurantOwnerLogin(this.loginForm.value).subscribe({
+  //     next:response=>{
+  //       console.log(response);
+  //       this.responseData = response;
+  //       localStorage.setItem("restaurant-Owner-Token",this.responseData.token);
+  //       localStorage.setItem("resOwnerEmail",this.responseData.emailId)
+  //       console.log(localStorage.getItem("resOwnerEmail"))
+  //       console.log(localStorage.getItem("restaurant-Owner-Token"));
+  //         this.router.navigateByUrl("restaurantDashboard");
+  //     }
+  //   })
 
   addDishes(){
     console.log(this.dishForm.value)
     console.log(this.restaurantForm.value)
+    // localStorage.setItem("restaurant",this.restaurantForm.value)
+    const body = JSON.stringify(this.restaurantForm.value)
     // const restaurantName = JSON.stringify(this.restaurantForm.value);
-    this.restaurantService.addDish(this.restaurantForm.value,this.dishForm.value).subscribe(
+    this.restaurantService.addDish(this.dishForm.value,body).subscribe(
       response=>{
+
         console.log(response);
         alert("Dish Added Successfully....")
       }

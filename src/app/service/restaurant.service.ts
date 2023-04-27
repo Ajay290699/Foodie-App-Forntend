@@ -16,22 +16,26 @@ export class RestaurantService {
       'Authorization' : 'Bearer ' +localStorage.getItem("restaurant-Owner-Token")
     });
     let requestOption = {headers : httpHeaders}
-    return this.httpClient.get(this.restaurantServiceUrl+"/getAllRestaurant",requestOption);
+    return this.httpClient.get(this.restaurantServiceUrl+"/getAllRestaurant");
+    console.log(this.restaurantServiceUrl);
   }
 
   addRestaurant(restaurantOwnerId:any,restaurant:any){
+    console.log(restaurantOwnerId);
+    console.log(restaurant)
     // ownerId = get
     let httpHeaders =  new HttpHeaders({
       'Authorization' : 'Bearer ' +localStorage.getItem("restaurant-Owner-Token")
     });
     let requestOption = {headers : httpHeaders}
+    console.log(requestOption)
     return this.httpClient.post(this.restaurantServiceUrl+"/add-restaurant/"+restaurantOwnerId,restaurant,requestOption);
   }
 
 
 
 
-  addDish(restaurantName:any,dish:any){
+  addDish(dish:any,restaurantName:any){
     let httpHeaders = new HttpHeaders({
       'Authorization' : 'Bearer ' +localStorage.getItem("restaurant-Owner-Token")
     })
