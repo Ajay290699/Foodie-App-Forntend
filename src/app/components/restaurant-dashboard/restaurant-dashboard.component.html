@@ -3,39 +3,18 @@
     <h1 class="h1">Hii Owner</h1>
     <h1>Welcome to FoodieApp</h1>
     <h2>Your Restaurant : </h2>
+    <button (click)="getAllRestaurant()">get your restaurant</button>
 
-    <div class="card-container">
+    <div class="card-container" *ngFor="let restaurant of allRestaurant">
       <div class="card">
         <img src="../../../assets/images/briyani.png" alt="#">
         <div class="pad">
-          <h2>Restaurant</h2>
-          <h3>Location : </h3>
+          <h2>{{restaurant.restaurantName}}</h2>
+          <h3>Location : {{restaurant.location}}</h3>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus necessitatibus laborum quia animi iste nostrum.</p>
         </div>
       </div>
     </div>
-
-    <!-- <div class="card" >
-      <div class="card-image-container">
-          <img src="../../../assets/images/cake.png" alt="" class="card-image">
-      </div>
-
-      <div class="card-info-container">
-          <h1 class="card-info-heading">Restaurant<span class="material-icons dish-type">
-
-          </span></h1>
-          <br/>
-          <p class="card-info-para">
-              Delicious crispy pan-fried dumplings are a satisfying favorite. Often they are filled with pork, cabbage, shiitake mushrooms, and garlic chives, dumplings can take on any filling by replacing some ingredients for others, or skipping some altogether.
-          </p>
-          <br/>
-          <br/>
-          <button class="btn"><span class="material-icons">
-              add_shopping_cart
-              </span></button>
-      </div> 
-
-  </div>-->
     
       <app-footer></app-footer>
 </div>

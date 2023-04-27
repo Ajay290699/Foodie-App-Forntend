@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserSignUp } from 'src/app/model/user/user-sign-up';
+import { UserAuthService } from 'src/app/service/user-auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -7,6 +10,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
+
+  constructor(private userAuthService:UserAuthService,private router:Router){}
 
   signupForm= new FormGroup({
     'firstName': new FormControl('',Validators.required),
@@ -26,7 +31,13 @@ export class SignupComponent {
  
 
   sendSignupData(){
-          
+    console.log(this.signupForm.value);
+    this.userAuthService.userRegistration(<UserSignUp>this.signupForm.value).subscribe(
+       response=>{
+      console.log(response);
+      alert("Registration successfull");
+       }
+    )
   }
   
 

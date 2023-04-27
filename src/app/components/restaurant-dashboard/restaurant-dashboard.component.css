@@ -24,6 +24,7 @@ h1{
 h2{
     background-color: rgb(223, 219, 219);
     margin-bottom: 50px;
+    padding-left: 20px;
 }
 .card{
     display: inline-block;

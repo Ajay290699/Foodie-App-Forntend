@@ -58,27 +58,39 @@
 
       <div class="addDish">
         <main class="form-signin w-100 m-auto">
-          <form>
-            <div style="text-align: center;"><img class="mb-4" src="../../../assets/images/Foodie.png" alt="" width="72" height="57">
-            </div>
-      
-            <h1 class="h3 mb-3 fw-normal">Add Your Dish</h1>
-            <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+          
+          <div>
+            <div style="text-align: center;"><img class="mb-4" src="../../../assets/images/Foodie.png" alt="" width="72" height="57"></div>
+              <h1 class="h3 mb-3 fw-normal">Add Your Dish</h1>
+            <form [formGroup]="restaurantForm">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="restaurantName">
                 <label for="floatingInput">Restaurant Name</label>
               </div>
+            </form>
+          </div>
+
+          <form [formGroup]="dishForm">
+            <!-- <div style="text-align: center;"><img class="mb-4" src="../../../assets/images/Foodie.png" alt="" width="72" height="57">
+            </div> -->
+      
+            <!-- <h1 class="h3 mb-3 fw-normal">Add Your Dish</h1> -->
+            <!-- <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="restaurantName">
+                <label for="floatingInput">Restaurant Name</label>
+              </div> -->
       
             <div class="form-floating">
-              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="dishName">
               <label for="floatingInput">Dish Name</label>
             </div>
             <div class="form-floating">
-              <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+              <input type="text" class="form-control" id="floatingPassword" placeholder="Password" formControlName="dishType">
               <label for="floatingPassword">Dish Type</label>
             </div>
       
             <div class="form-floating">
-              <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+              <input type="text" class="form-control" id="floatingPassword" placeholder="Password"formControlName="dishPrice">
               <label for="floatingPassword">Price</label>
             </div>
             <div class="mb-3">
@@ -87,7 +99,7 @@
             </div>
       
       
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Add dish</button>
+            <button class="w-100 btn btn-lg btn-primary" (click)="addDishes()">Add dish</button>
           </form>
         </main>
       </div>

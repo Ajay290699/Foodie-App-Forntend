@@ -1,6 +1,6 @@
  <body class="image">
     <app-header></app-header>
-    <form  class="form"  (ngSubmit)="sendSignupData()" [formGroup]="signupForm">
+    <form  class="form"  [formGroup]="signupForm">
         <div class="container">
         <h3>New Registration</h3>
 
@@ -111,10 +111,10 @@
       
     </div>
            
-        <label>Profile Image Upload</label>
-        <input style="padding-top: 10px;" type="file" class="form-control" formControlName="image" placeholder="No file chosen">
+        <!-- <label>Profile Image Upload</label>
+        <input style="padding-top: 10px;" type="file" class="form-control" formControlName="image" placeholder="No file chosen"> -->
     
-        <button   type="submit" [disabled]="!signupForm.valid">Register</button>
+        <button (click)="sendSignupData()">Register</button>
       </div>
     </form>
 </body>

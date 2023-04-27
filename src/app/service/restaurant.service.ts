@@ -9,14 +9,14 @@ export class RestaurantService {
 
   constructor(private httpClient:HttpClient) { }
 
-  restaurantServiceUrl = "http://localhost:5000/restaurant-service";
+  restaurantServiceUrl = "http://localhost:8082/restaurant-service";
 
-  getRestaurant(restaurantOwnerId:any){
+  getRestaurant(){
     let httpHeaders =  new HttpHeaders({
       'Authorization' : 'Bearer ' +localStorage.getItem("restaurant-Owner-Token")
     });
     let requestOption = {headers : httpHeaders}
-    return this.httpClient.get(this.restaurantServiceUrl+"/getOwnerRestaurant/"+restaurantOwnerId,requestOption);
+    return this.httpClient.get(this.restaurantServiceUrl+"/getAllRestaurant",requestOption);
   }
 
   addRestaurant(restaurantOwnerId:any,restaurant:any){
@@ -28,7 +28,10 @@ export class RestaurantService {
     return this.httpClient.post(this.restaurantServiceUrl+"/add-restaurant/"+restaurantOwnerId,restaurant,requestOption);
   }
 
-  addDish(dish:any, restaurantName:any){
+
+
+
+  addDish(restaurantName:any,dish:any){
     let httpHeaders = new HttpHeaders({
       'Authorization' : 'Bearer ' +localStorage.getItem("restaurant-Owner-Token")
     })

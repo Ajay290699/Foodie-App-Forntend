@@ -56,18 +56,23 @@
 
 <div class="addDish">
     <main class="form-signin w-100 m-auto">
-      <form>
+      <form [formGroup]="restaurantForm">
         <div style="text-align: center;"><img class="mb-4" src="../../../assets/images/Foodie.png" alt="" width="72" height="57">
         </div>
   
         <h1 class="h3 mb-3 fw-normal">Add Your Restaurant</h1>
+
+        <!-- <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="emailId">
+            <label for="floatingInput">Restaurant Owner EmailId</label>
+          </div> -->
   
         <div class="form-floating">
-          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="restaurantName">
           <label for="floatingInput">Restaurant Name</label>
         </div>
         <div class="form-floating">
-          <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+          <input type="text" class="form-control" id="floatingPassword" placeholder="Password" formControlName="location">
           <label for="floatingPassword">Location</label>
         </div>
 
@@ -77,7 +82,7 @@
         </div>
   
   
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Add Restaurant</button>
+        <button class="w-100 btn btn-lg btn-primary"  (click)="registerRestuarant()">Add Restaurant</button>
       </form>
     </main>
   </div>
