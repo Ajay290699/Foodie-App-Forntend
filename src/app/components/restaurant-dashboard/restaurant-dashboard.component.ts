@@ -9,9 +9,11 @@ import { RestaurantService } from 'src/app/service/restaurant.service';
 })
 export class RestaurantDashboardComponent {
 
-  constructor(private restaurantService:RestaurantService){}
+  constructor(private restaurantService:RestaurantService){
+    this.getAllRestaurant();
+  }
 
-  allRestaurant:Array<Restaurant> | undefined;
+  allRestaurant:any;
 
   getAllRestaurant(){
     this.restaurantService.getRestaurant().subscribe(

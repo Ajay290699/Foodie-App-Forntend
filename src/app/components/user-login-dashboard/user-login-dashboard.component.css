@@ -1,3 +1,51 @@
+/* a{
+    text-decoration: none;
+    color: red;
+}
+.searchbar{
+    margin-left: 33%;
+}
+.searchbar input{
+    width: 500px;
+    margin-top: 100px;
+    border-radius: 10px;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.searchbar button{
+    padding: 5px;
+    border-radius: 10px;
+    width: 40px;
+    background-color: white;
+}
+
+
+.background{
+    background-image: url(https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=600);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.carousel h1{
+    font-size: 50px;
+    margin-top: 50px;
+    margin-left: 170px;
+} */
+
+/* .card >img{
+    width: 20px;
+    height: 20px;
+    height: 150px;
+    width: 100%;
+} */
+/* .card{
+    border: 1px solid black;
+    display: inline-block;
+    width: 300px;
+} */
+
+/* saumya */
 a{
     text-decoration: none;
     color: red;
@@ -44,16 +92,33 @@ a{
 .card >img{
     /* width: 20px;
     height: 20px; */
-    height: 150px;
-    width: 100%;
+    height: 120px;
+    width: 250px;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 .card{
-    border: 1px solid black;
+    border: 2px solid black;
     display: inline-block;
     width: 300px;
+    margin-left: 20px;
+    height: 300px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 10px rgb(220, 218, 218);
+    background-color: rgb(222, 220, 220);
     /* position: relative; */
 }
+
 /* .card> button> icon:hover{
     color: red;
     background-color: green;
 } */
+h1{
+   margin-left: 50px;
+   margin-top: 3px;
+}
+
+h3{
+    margin-left: 50px;   
+}

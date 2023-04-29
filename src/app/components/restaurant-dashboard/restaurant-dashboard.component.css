@@ -50,3 +50,10 @@ img{
     padding: 30px;
     margin-bottom: 100px;
 }
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* max-width: 1200px; */
+}

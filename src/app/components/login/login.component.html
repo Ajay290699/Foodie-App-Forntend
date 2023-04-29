@@ -11,20 +11,20 @@
             <div class="col-right">
                 <div class="login-form">
                     <h2>Login</h2>
-                    <form >
+                    <form [formGroup]="loginForm">
                         <p> <label>Username/Email address<span>*</span></label>
                              <input type="text" placeholder="Username or Email" formControlName="email">
                         </p>
-                        <!-- <mat-error *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid"
-                             style="color:red;font-size: small;">Please enter Valid Email id</mat-error> -->
+                        <mat-error *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid"
+                             style="color:red;font-size: small;">Please enter Valid Email id</mat-error>
                         <p> 
                             <label>Password<span>*</span></label> 
                             <input type="password" placeholder="Password" formControlName="password">
                          </p>
-                            <!-- <mat-error *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid"
-                            style="color:red;font-size: small;">Please enter Valid Password</mat-error> -->
+                            <mat-error *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid"
+                            style="color:red;font-size: small;">Please enter Valid Password</mat-error>
                         <p>
-                            <input type="submit" value="Sign In" [disabled]="!loginForm.valid"> 
+                            <input value="Sign In" (click)="userLogIn()"> 
                         </p>
                         <p>
                              <a href="">Forgot password?</a> 

@@ -18,14 +18,14 @@
     </div>
 </div>
 
-<div class="card">
+<div class="card" *ngFor="let restaurant of allRestaurant">
     <img src="../../../assets/images/briyani.png" alt="">
-    <button mat-icon-button color="accent">
+    <button mat-icon-button [style.color]="color" (click)="changecolor()">
         <!-- <i class="fa fa-heart"></i> -->
         <mat-icon class="icon">favorite</mat-icon>
     </button>
     <div class="content">
-        <h1>Dish-Name</h1>
-        <h3>discription</h3>
+        <h1>{{restaurant.restaurantName}}</h1>
+        <h3>{{restaurant.location}}</h3>
     </div>
 </div>
