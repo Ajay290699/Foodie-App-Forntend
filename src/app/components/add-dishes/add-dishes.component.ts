@@ -58,9 +58,9 @@ export class AddDishesComponent {
     console.log(this.dishForm.value)
     console.log(this.restaurantForm.value)
     // localStorage.setItem("restaurant",this.restaurantForm.value)
-    const body = JSON.stringify(this.restaurantForm.value)
+    // const body = JSON.stringify(this.restaurantForm.value)
     // const restaurantName = JSON.stringify(this.restaurantForm.value);
-    this.restaurantService.addDish(this.dishForm.value,body).subscribe(
+    this.restaurantService.addDish(this.dishForm.value,this.restaurantForm.value.restaurantName).subscribe(
       response=>{
 
         console.log(response);
