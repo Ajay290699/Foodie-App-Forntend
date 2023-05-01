@@ -24,7 +24,7 @@
                             <mat-error *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid"
                             style="color:red;font-size: small;">Please enter Valid Password</mat-error>
                         <p>
-                            <input value="Sign In" (click)="userLogIn()"> 
+                            <input type="button" value="Sign In" (click)="userLogIn()"> 
                         </p>
                         <p>
                              <a href="">Forgot password?</a> 

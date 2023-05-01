@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { Dishes } from 'src/app/model/restaurant/dishes';
 import { Restaurant } from 'src/app/model/restaurant/restaurant';
 import { RestaurantService } from 'src/app/service/restaurant.service';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-user-login-dashboard',
@@ -9,8 +11,10 @@ import { RestaurantService } from 'src/app/service/restaurant.service';
 })
 export class UserLoginDashboardComponent {
 
-  constructor(private restaurantService:RestaurantService){
+  constructor(private restaurantService:RestaurantService, private userServcie:UserService){
+    console.log(this.getAllDishes);
     this.getAllRestaurant();
+    this.getAllDishes();
   }
 
   allRestaurant:any;
@@ -25,6 +29,20 @@ export class UserLoginDashboardComponent {
       console.log(error)
     }
       
+  }
+
+  allDishes:any;
+
+  getAllDishes(){
+    this.restaurantService.getAllDish().subscribe(
+      res=>{
+        this.allDishes = res as Dishes[];
+        console.log(res);
+      }
+    ),
+    (error:any)=>{
+      console.log(error)
+    }
   }
 
   num:any=0;
@@ -44,4 +62,17 @@ export class UserLoginDashboardComponent {
     }
   }
 
+
+  addToCart(dish:any)
+{
+    this.userServcie.addDishesToUserCart(dish).subscribe(
+      response=>{
+        console.log(response);
+        alert("dish added to cart");
+      }
+    ),
+    (error:any)=>{
+      console.log(error);
+    }
+}
 }

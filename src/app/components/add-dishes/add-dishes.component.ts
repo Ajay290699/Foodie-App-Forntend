@@ -13,7 +13,7 @@ export class AddDishesComponent {
 
   dishForm = this.fb.group({
     'dishName':[''],
-    'dishType':[''],
+    'type':[''],
     'dishPrice':['']
   })
 
@@ -29,8 +29,8 @@ export class AddDishesComponent {
     return this.dishForm.get('dishName')
   }
 
-  get dishType(){
-    return this.dishForm.get('dishType')
+  get type(){
+    return this.dishForm.get('type')
   }
 
   get dishPrice(){

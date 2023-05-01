@@ -85,18 +85,22 @@
               <label for="floatingInput">Dish Name</label>
             </div>
             <div class="form-floating">
-              <input type="text" class="form-control" id="floatingPassword" placeholder="Password" formControlName="dishType">
-              <label for="floatingPassword">Dish Type</label>
+              <!-- <input type="" class="form-control" id="floatingPassword" placeholder="Password" formControlName="type"> -->
+              <select class="form-control" id="floatingPassword"  formControlName="type">
+                <option value="veg">veg</option>
+                <option value="non-veg">non-veg</option>
+              </select>
+              <label for="floatingPassword">Select Dish Type</label>
             </div>
       
             <div class="form-floating">
-              <input type="text" class="form-control" id="floatingPassword" placeholder="Password"formControlName="dishPrice">
+              <input type="number" class="form-control" id="floatingPassword" placeholder="Password"formControlName="dishPrice">
               <label for="floatingPassword">Price</label>
             </div>
-            <div class="mb-3">
+            <!-- <div class="mb-3">
               <label for="formFile" class="form-label">Upload picture of dish</label>
               <input class="form-control" type="file" id="formFile">
-            </div>
+            </div> -->
       
       
             <button class="w-100 btn btn-lg btn-primary" (click)="addDishes()">Add dish</button>

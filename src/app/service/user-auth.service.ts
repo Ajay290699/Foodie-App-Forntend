@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { UserSignUp } from '../model/user/user-sign-up';
+import { AppModule } from '../app.module';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +19,14 @@ export class UserAuthService {
 
   userLogIn(user:any){
       return this.httpclient.post(this.userAuthBaseUrl+"/login",user);
+  }
+
+  getUserImage(user:any){
+    return this.httpclient.get(this.userAuthBaseUrl+"/file/"+user)
+  }
+
+  uploadUserImage(image:any){
+    return this.httpclient.post(this.userAuthBaseUrl+"/file",image)
   }
 
 

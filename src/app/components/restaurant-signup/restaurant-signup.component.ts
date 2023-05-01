@@ -38,6 +38,7 @@ export class RestaurantSignupComponent {
     this.resAuthService.restaurantOwnerRegistration(<RestaurantSignUp>this.signupForm.value).subscribe({
       next:data=>{
         this.receiveddata = data;
+        alert("Registered Successfully")
         console.log(this.receiveddata);
       }
     })

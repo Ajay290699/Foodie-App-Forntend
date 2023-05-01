@@ -75,4 +75,12 @@ export class RestaurantService {
     return this.httpClient.delete(this.restaurantServiceUrl+"/deleteDish/"+restaurantName,requestOption);
   }
 
+  getAllDish(){
+    let httpHeaders = new HttpHeaders({
+      'Authorization' : 'Bearer ' +localStorage.getItem("restaurant-Owner-Token")
+    })
+    let requestOption = {headers : httpHeaders}
+    return this.httpClient.get(this.restaurantServiceUrl+"/getAllDishes",requestOption)
+  }
+
 }

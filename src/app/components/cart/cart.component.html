@@ -19,17 +19,26 @@
               <table class="item-table" style="background-color: aqua;width: 100%">
                 <thead>
                   <tr>
-                    <th>Food Item</th>
-                    <th>Price</th>
+                    <th>Dish name</th>
+                    <th>type</th>
                     <th>Quantity</th>
-                    <th>Total</th>
-                    <th>Remove</th>
+                    <th>Price</th>
+                    <!-- <th>Total</th>
+                    <th>Remove</th> -->
                   </tr>
                 </thead>
+                <tbody>
+                  <tr *ngFor="let dish of dishes">
+                    <th>{{dish.dishName}}</th>
+                    <th>{{dish.type}}</th>
+                    <th>{{dish.dishPrice}}</th>
+                    <th></th>
+                  </tr>
+                </tbody>
             
               </table>
             </div>
-            <div class="finalCartDetails">
+            <!-- <div class="finalCartDetails">
               <table class="finalCart-table">
                 <thead>
                   <tr>
@@ -66,7 +75,7 @@
                   </tr>
                 </tbody>
               </table>
-            </div>
+            </div> -->
           </div>
           <app-footer></app-footer>
         </body>

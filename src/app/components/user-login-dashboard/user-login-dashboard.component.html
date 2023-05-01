@@ -18,14 +18,35 @@
     </div>
 </div>
 
-<div class="card" *ngFor="let restaurant of allRestaurant">
-    <img src="../../../assets/images/briyani.png" alt="">
-    <button mat-icon-button [style.color]="color" (click)="changecolor()">
-        <!-- <i class="fa fa-heart"></i> -->
-        <mat-icon class="icon">favorite</mat-icon>
-    </button>
-    <div class="content">
-        <h1>{{restaurant.restaurantName}}</h1>
-        <h3>{{restaurant.location}}</h3>
+<div>
+    <h1>Restaurants : </h1>
+    <div class="card" *ngFor="let restaurant of allRestaurant">
+        <img src="../../../assets/images/briyani.png" alt="">
+        <button mat-icon-button [style.color]="color" (click)="changecolor()">
+            <!-- <i class="fa fa-heart"></i> -->
+            <mat-icon class="icon">favorite</mat-icon>
+        </button>
+        <div class="content">
+            <h1>{{restaurant.restaurantName}}</h1>
+            <h3>{{restaurant.location}}</h3>
+        </div>
+        <!-- <button>Add to cart</button> -->
+    </div>
+</div>
+
+<div>
+    <h1>Dishes : </h1>
+    <div class="card" *ngFor="let dish of allDishes">
+        <img src="../../../assets/images/briyani.png" alt="">
+        <button mat-icon-button [style.color]="color" (click)="changecolor()">
+            <!-- <i class="fa fa-heart"></i> -->
+            <mat-icon class="icon">favorite</mat-icon>
+        </button>
+        <div class="content">
+            <h1>{{dish.dishName}}</h1>
+            <h3>{{dish.type}}</h3>
+            <h3>{{dish.dishPrice}}</h3>
+        </div>
+        <button (click)="addToCart(dish)">Add to cart</button>
     </div>
 </div>
