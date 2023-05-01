@@ -14,7 +14,7 @@ export class UserService {
 
   addDishesToUserCart(Dish :any){
     let httpHeaders = new HttpHeaders({
-      'Authorization' : 'Bearer ' +localStorage.getItem("token")
+      'Authorization' : 'Bearer ' +localStorage.getItem("user_token")
     })
     let requestOption = {headers : httpHeaders}
     return this.httpclient.post(this.userServcieUrl+"addDishesToUserCart",Dish,requestOption)
@@ -22,7 +22,7 @@ export class UserService {
 
   getAllDishFromCart(){
     let httpHeaders = new HttpHeaders({
-      'Authorization' : 'Bearer ' +localStorage.getItem("token")
+      'Authorization' : 'Bearer ' +localStorage.getItem("user_token")
     })
     let requestOption = {headers : httpHeaders}
     return this.httpclient.get(this.userServcieUrl+"getUserCartAllDishes",requestOption) 
