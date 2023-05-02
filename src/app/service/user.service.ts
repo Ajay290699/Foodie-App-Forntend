@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Dishes } from '../model/restaurant/dishes';
 
 @Injectable({
   providedIn: 'root'
@@ -12,17 +13,17 @@ export class UserService {
 
   // orderUrl
 
-  addDishesToUserCart(Dish :any){
+  addDishesToUserCart(dish : Dishes){
     let httpHeaders = new HttpHeaders({
-      'Authorization' : 'Bearer ' +localStorage.getItem("user_token")
+      'Authorization' : 'Bearer ' +localStorage.getItem("token")
     })
     let requestOption = {headers : httpHeaders}
-    return this.httpclient.post(this.userServcieUrl+"addDishesToUserCart",Dish,requestOption)
+    return this.httpclient.post(this.userServcieUrl+"addDishesToUserCart",dish,requestOption)
   }
 
   getAllDishFromCart(){
     let httpHeaders = new HttpHeaders({
-      'Authorization' : 'Bearer ' +localStorage.getItem("user_token")
+      'Authorization' : 'Bearer ' +localStorage.getItem("token")
     })
     let requestOption = {headers : httpHeaders}
     return this.httpclient.get(this.userServcieUrl+"getUserCartAllDishes",requestOption) 

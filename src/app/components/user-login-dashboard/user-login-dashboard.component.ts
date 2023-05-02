@@ -12,7 +12,6 @@ import { UserService } from 'src/app/service/user.service';
 export class UserLoginDashboardComponent {
 
   constructor(private restaurantService:RestaurantService, private userServcie:UserService){
-    console.log(this.getAllDishes);
     this.getAllRestaurant();
     this.getAllDishes();
   }
