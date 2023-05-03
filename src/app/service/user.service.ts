@@ -67,4 +67,30 @@ export class UserService {
     return this.httpclient.post(this.userServcieUrl+"deleteDishesFromUserCart",dish,requestOption) 
   }
 
+  deleteDishFromFavourite(dish:any){
+    let httpHeaders = new HttpHeaders({
+      'Authorization' : 'Bearer ' +localStorage.getItem("User_Token")
+    })
+    let requestOption = {headers : httpHeaders}
+    return this.httpclient.post(this.userServcieUrl+"deleteDishesFromUserFavourite",dish,requestOption) 
+  }
+
+  
+
+  deleteRestaurantFromFavourite(restaurant:any){
+    let httpHeaders = new HttpHeaders({
+      'Authorization' : 'Bearer ' +localStorage.getItem("User_Token")
+    })
+    let requestOption = {headers : httpHeaders}
+    return this.httpclient.post(this.userServcieUrl+"deleteRestaurantFromUserFavourite",restaurant,requestOption) 
+  }
+
+  getUser(){
+    let httpHeaders = new HttpHeaders({
+      'Authorization' : 'Bearer ' +localStorage.getItem("User_Token")
+    })
+    let requestOption = {headers : httpHeaders}
+    return this.httpclient.get(this.userServcieUrl+"getUserDetails",requestOption) 
+  }
+
 }

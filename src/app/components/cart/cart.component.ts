@@ -9,41 +9,54 @@ import { UserService } from 'src/app/service/user.service';
 export class CartComponent {
 
   constructor(private userService:UserService){
-    this.getDishInTable();
-    
+   
   }
-
- 
+ngOnInit(){
+  this.getDishInTable();
+}
 
   dishes : any;
-  sum:any;
+  sum:number=0;
 
   getDishInTable(){
     this.userService.getAllDishFromCart().subscribe(
       res=>{
         this.dishes = res;
-       
       
-        // for(let a=0;a<this.dishes.length;a++)
-        // {
-        //      this.sum=this.sum + this.dishes.quantity*this.dishes.dishPrice;
-        // }
+      for(let i=0;i<this.dishes.length;i++)
+  {
+    this.sum=this.dishes[i].quantity*this.dishes[i].dishPrice+this.sum;
+  }
       }
     ),(error:any)=>{
       console.log(error);
     }
   }
-  deleteDishFromCart(dish:any){
-     this.userService.deleteDishFromCart(dish).subscribe(
-      response=>{
-        console.log(response);
-        alert("removed dish");
-        this.getDishInTable();      }
-     )  ,(error:any)=>{
-      console.log(error);
-    }
-  }
 
-  
+  deleteDishFromCart(dish:any){
+    this.userService.deleteDishFromCart(dish).subscribe(
+     response=>{
+       console.log(response);
+       alert("removed dish");
+       this.sum=0;
+      //  this.getDishInTable(); 
+       this.ngOnInit();  
+       }
+    )  ,(error:any)=>{
+     console.log(error);
+   }
+ }
+
+
+  // deleteDishFromCart(dish:any){
+  //    this.userService.deleteDishFromCart(dish).subscribe(
+  //     response=>{
+  //       console.log(response);
+  //       alert("removed dish");
+  //       this.getDishInTable();      }
+  //    )  ,(error:any)=>{
+  //     console.log(error);
+  //   }
+  // }
 
 }

@@ -36,6 +36,7 @@ import { AddRestaurantComponent } from './components/add-restaurant/add-restaura
 import { AddDishesComponent } from './components/add-dishes/add-dishes.component';
 import { UploadUserImageComponent } from './components/upload-user-image/upload-user-image.component';
 import { RestaurantHeaderComponent } from './components/restaurant-header/restaurant-header.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -67,7 +68,7 @@ import { RestaurantHeaderComponent } from './components/restaurant-header/restau
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,MatToolbarModule,MatIconModule,MatTabsModule,MatButtonModule,MatInputModule,MatSelectModule,
-    FormsModule,MatCardModule,ReactiveFormsModule,MatRadioModule,HttpClientModule
+    FormsModule,MatCardModule,ReactiveFormsModule,MatRadioModule,HttpClientModule,MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

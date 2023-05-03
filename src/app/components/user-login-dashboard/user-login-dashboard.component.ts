@@ -45,41 +45,41 @@ export class UserLoginDashboardComponent {
     }
   }
 
-  num:any=0;
-  color="black";
-  changecolor(){
-    if(this.num==0)
-    {
-      this.color="red";
-      this.num=1;
-      alert("Added to Favourites");
-  }
-    else
-    {
-       this.color="black";
-       this.num=0;
-       alert("Removed from Favourites");
-    }
-  }
+  // num:any=0;
+  // color="black";
+  // changecolor(){
+  //   if(this.num==0)
+  //   {
+  //     this.color="red";
+  //     this.num=1;
+  //     alert("Added to Favourites");
+  // }
+  //   else
+  //   {
+  //      this.color="black";
+  //      this.num=0;
+  //      alert("Removed from Favourites");
+  //   }
+  // }
 
-a:any;
-b:any;
-addToCart(dish:any)
-{
-  this.a=document.getElementById("i");
-
-        dish.quantity=this.a.value;
-    this.userServcie.addDishesToUserCart(dish).subscribe(
-      response=>{
-        
-        console.log(response);
-        alert("dish added to cart");
+  a:any;
+  b:any;
+    addToCart(dish:any,i:any)
+  {
+        this.a=document.getElementById("n"+i);
+  
+          dish.quantity=this.a.value;
+          this.userServcie.addDishesToUserCart(dish).subscribe(
+          response=>{
+          
+          console.log(response);
+          alert("dish added to cart");
+        }
+      ),
+      (error:any)=>{
+        console.log(error);
       }
-    ),
-    (error:any)=>{
-      console.log(error);
-    }
-}
+  }
 
 addDishToFavourite(dish:any){
 this.userServcie.addDishesToUserFavorite(dish).subscribe(

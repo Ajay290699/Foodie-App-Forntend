@@ -19,36 +19,42 @@
 </div>
 
 <div>
-    <h1>Restaurants : </h1>
-    <div class="card" *ngFor="let restaurant of allRestaurant">
-        <img src="http://localhost:8080/app/v1/images/{{restaurant.resImage}}" alt="">
-        <button mat-icon-button [style.color]="color" (click)="changecolor()">
-            <!-- <i class="fa fa-heart"></i> -->
-            <mat-icon class="icon">favorite</mat-icon>
-        </button>
-        <div class="content">
-            <h1>{{restaurant.restaurantName}}</h1>
-            <h3>{{restaurant.location}}</h3>
-            <button (click)="addResturantToFavourite(restaurant)">Add to favorite</button>
+    <h1 style="background-color: beige; padding-left: 20px; font-size: 30px;">Restaurants : </h1>
+
+    <div class="card" *ngFor="let restaurant of allRestaurant" >
+        <div class="card-image-container">
+            <img src="../../../assets/images/dosa.png" alt="" class="card-image">
         </div>
-        <!-- <button>Add to cart</button> -->
-    </div>
+        <div style="padding: 10px;">
+            <h1 class="card-info-heading" style="margin-bottom: -2px; margin-top: 5px; margin-left: -5px; font-size: 30px; font-weight: 600;">{{restaurant.restaurantName}}</h1>
+            <h1 style="margin-bottom: -5px; margin-left: -5px;">{{restaurant.location}}</h1>
+            <br/>
+            <p class="card-info-para">
+                {{restaurant.restaurantName}} it is the best restaurant in {{restaurant.location}}, which serve's best food item. <br>
+                Enjoy the flavou's of nature. Continue your diet and healthy and tasty meal in {{restaurant.restaurantName}}. 
+            </p>
+        </div>
+        <button (click)="addResturantToFavourite(restaurant)" class="btn" style="margin-top: 5px;"><i style="font-size: 30px;" class="fa fa-heart"></i></button>
+        </div>
 </div>
 
 <div>
-    <h1>Dishes : </h1>
-    <div class="card" *ngFor="let dish of allDishes">
-        <img src="../../../assets/images/briyani.png" alt="">
-        <!-- <button mat-icon-button [style.color]="color" (click)="changecolor()">
-            <mat-icon class="icon">favorite</mat-icon>
-        </button> -->
-        <div class="content">
-            <h1>{{dish.dishName}}</h1>
-            <h3>{{dish.type}}</h3>
-            <h3>{{dish.dishPrice}}</h3>
-            <h3>Quantity<input type="number" id="i" min="1"></h3>
+    <h1 style="background-color: beige; padding-left: 20px; font-size: 30px;">Dishes : </h1>
+
+    <div class="card" *ngFor="let dish of allDishes let index=index" >
+        <div class="card-image-container">
+            <img src="../../../assets/images/dosa.png" alt="" class="card-image">
         </div>
-        <button (click)="addToCart(dish)">Add to cart</button>
-        <button (click)="addDishToFavourite(dish)">Add to favorite</button>
+        <div style="padding: 10px;">
+            <h1 class="card-info-heading" style="margin-bottom: -2px; margin-top: 5px; margin-left: -5px; font-size: 30px; font-weight: 600;">{{dish.dishName}}</h1>
+            <h1 style="margin-bottom: -5px; margin-left: -5px;">{{dish.type}}</h1>
+                <h3>{{dish.dishPrice}}</h3>
+                <h3><input type="number" id="n{{index}}" value="1" minlength="1"></h3>
+            <br/>
+        </div>
+        <button (click)="addDishToFavourite(dish)" class="btn1" style="margin-top: 5px;"><i style="font-size: 20px;" class="fa fa-heart"></i></button>
+        <button (click)="addToCart(dish,index)" id="i" class="btn2" style="margin-top: 5px;"><span class="material-icons">
+            add_shopping_cart
+            </span></button>
     </div>
 </div>

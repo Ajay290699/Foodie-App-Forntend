@@ -46,7 +46,7 @@ body{
     font-weight: lighter;
 }
 
-.btn{
+.btn, .btn1{
     margin-top: -30px;
     background-color: #FFEB3B;
     outline: none;
@@ -70,9 +70,16 @@ body{
     -o-transition: .3s;
 }
 
-.btn:hover{
+.btn:hover, .delete:hover{
     background-color: rgb(228, 87, 87);
     color: white;
+}
+.btn1:hover{
+    background-color: rgb(63, 185, 106);
+    color: white;
+}
+.btn1{
+    width: 70%;
 }
 
 .dish-type{
@@ -97,9 +104,32 @@ body{
     font-weight: bold;
 }
 
-.dish :hover{
+/* .dish :hover{
     background-color: rgb(63, 185, 106);
     color: white;
+} */
+.delete{
+    margin-top: -30px;
+    background-color: #FFEB3B;
+    outline: none;
+    border: none;
+    width: 30%;
+    color: #6e6301;
+    height: 60px;
+    border-radius: 3em;
+    -webkit-border-radius: 3em;
+    -moz-border-radius: 3em;
+    -ms-border-radius: 3em;
+    -o-border-radius: 3em;
+    /* padding: 1em 2em; */
+    font-size: .7em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
 }
 
 

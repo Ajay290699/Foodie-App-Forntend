@@ -1,6 +1,6 @@
 <body>
     <app-header></app-header>
-    <div class="emptyCart" style=" display: flex; justify-content: center; align-items: center;">
+    <div class="emptyCart" style=" display: flex; justify-content: center; align-items: center;" *ngIf="resturantes.length ==0">
         <div class="card" style=" width: fit-content; margin: 50px; border-radius: 5%; border: black 2px dotted; padding: 24px;" >
     
         <div class="center">
@@ -10,8 +10,15 @@
           <button routerLink="/home" class="order" style="width: 100%; height: 30px; border: whitesmoke 2px solid; color: whitesmoke; background-color: red;" >Go to Dashbord</button>
         </div>
         </div>
-             </div>
-             <h1 style="padding-left: 20px; background-color: beige;">Your Restaurant's :</h1>
+    </div>
+
+
+
+<!-- <div *ngIf="dishes.length && resturantes.length != 0"> -->
+
+    <!-- restaurant -->
+    <div *ngIf="resturantes != 0">
+        <h1 style="padding-left: 20px; background-color: beige;">Your Restaurant's :</h1>
              <!-- <div *ngFor="let i of demo" style="background-color: bisque;"> -->
                 <div  class=" row gy-5 me-3" style="display: inline-flex;" *ngFor="let i of resturantes" >
                         
@@ -32,17 +39,18 @@
             </p>
             <br/>
             <br/>
-            <button class="btn"><i class="fa fa-trash" style="font-size: 30px;"></i></button>
+            <button class="btn" id="b" (click)="deleteRestaurantFromFavourite(i)"><i class="fa fa-trash" style="font-size: 30px;"></i></button>
         </div>
 
     </div>
-
     </div>
 
     </div>
-    <div>
-        <h1>Your's Dishes</h1>
-        <!-- {{dishes|json}} -->
+
+    </div>
+
+    <!-- <div>
+        <h1 style="padding-left: 20px; background-color: beige;">Your Dishes</h1>
         <div  class=" row gy-5 me-3" style="display: inline-flex;" *ngFor="let dish of dishes" >
                         
             <div class=" mb-3" style="width: 350px; margin: 24px;">
@@ -54,17 +62,22 @@
     <h1 class="card-info-heading" style="margin-bottom: -2px; margin-top: 5px; font-size: 30px; font-weight: 600;">{{dish.dishName}} </h1>
     <h1 style="margin-bottom: -5px;">&#8377; {{dish.dishPrice}}</h1>
    <p>Type : {{dish.type}}</p>
-   <!-- <p>{{dish.quantity}}</p> -->
 </div>
-<button class="btn dish" style="margin-top: 5px;"><span class="material-icons">
-    add_shopping_cart
-    </span></button>
-</div>
-
-</div>
-
-</div>
+    <div style="display: inline-block;">
+        <button (click)="deleteDishFromFavourite(dish)" class="delete" id="a"><i class="fa fa-trash" style="font-size: 30px;"></i></button>
+        <button (click)="addToCart(dish)" id="i" class="btn1" style="margin-top: 5px;"><span class="material-icons">
+        add_shopping_cart
+        </span></button>
     </div>
+</div>
+
+</div>
+
+</div>
+    </div> -->
+
+<!-- </div> -->
+
     <app-footer></app-footer>
 
 </body>
