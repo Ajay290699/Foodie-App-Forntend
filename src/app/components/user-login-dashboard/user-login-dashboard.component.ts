@@ -3,6 +3,11 @@ import { Dishes } from 'src/app/model/restaurant/dishes';
 import { Restaurant } from 'src/app/model/restaurant/restaurant';
 import { RestaurantService } from 'src/app/service/restaurant.service';
 import { UserService } from 'src/app/service/user.service';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-user-login-dashboard',
@@ -11,11 +16,14 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class UserLoginDashboardComponent {
 
-  constructor(private restaurantService:RestaurantService, private userServcie:UserService){
+  constructor(private snackBar:MatSnackBar,private restaurantService:RestaurantService, private userServcie:UserService){
     console.log(this.getAllDishes);
     this.getAllRestaurant();
     this.getAllDishes();
   }
+
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   allRestaurant:any;
 
@@ -73,7 +81,10 @@ export class UserLoginDashboardComponent {
           response=>{
           
           console.log(response);
-          alert("dish added to cart");
+          this.snackBar.open("Dish added to cart","Ok",{
+            horizontalPosition:this.horizontalPosition,
+            verticalPosition:this.verticalPosition,
+          });
         }
       ),
       (error:any)=>{
@@ -84,7 +95,10 @@ export class UserLoginDashboardComponent {
 addDishToFavourite(dish:any){
 this.userServcie.addDishesToUserFavorite(dish).subscribe(
   response=> {
-    alert("dish added in favorite.....");
+    this.snackBar.open("Dish added to Favourite..","Ok",{
+      horizontalPosition:this.horizontalPosition,
+      verticalPosition:this.verticalPosition,
+    });
   },
   (err:any)=>{
     console.log(err);
@@ -95,7 +109,10 @@ this.userServcie.addDishesToUserFavorite(dish).subscribe(
 addResturantToFavourite(restaurant:any){
   this.userServcie.addResturantToUserFavourite(restaurant).subscribe(
     response=> {
-      alert("resturant added in favorite.....");
+      this.snackBar.open("Restaurant added in Favourite..","Ok",{
+        horizontalPosition:this.horizontalPosition,
+        verticalPosition:this.verticalPosition,
+      });
     },
     (err:any)=>{
       console.log(err);

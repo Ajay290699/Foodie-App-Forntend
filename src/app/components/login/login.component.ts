@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {  FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserAuthService } from 'src/app/service/user-auth.service';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +15,11 @@ import { UserAuthService } from 'src/app/service/user-auth.service';
 })
 export class LoginComponent {
 
-  constructor(private router: Router,private service:UserAuthService){}
+  constructor(private router: Router,private service:UserAuthService,private snackBar:MatSnackBar){}
+
+  
+horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   phonePattern = '^[7-9][0-9]{9}$';
   passwordPattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$";
@@ -38,14 +47,19 @@ export class LoginComponent {
     this.service.userLogIn(this.loginForm.value).subscribe( data1=>{
       console.log(data1);
       this.responseData = data1
-      
-   alert("login successfull");
+      this.snackBar.open("Login successful..","Ok",{
+        horizontalPosition:this.horizontalPosition,
+        verticalPosition:this.verticalPosition,
+      });
    localStorage.setItem("User_Token",this.responseData.token);
      
       this.router.navigateByUrl('/userDashboard');
     },
     error=>{
-      alert("invalid credentials");
+      this.snackBar.open("Invalid credentials","Ok",{
+        horizontalPosition:this.horizontalPosition,
+        verticalPosition:this.verticalPosition,
+      });
     }
     )
   }

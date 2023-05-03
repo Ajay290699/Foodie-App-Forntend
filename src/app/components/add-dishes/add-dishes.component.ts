@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { RestaurantService } from 'src/app/service/restaurant.service';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-add-dishes',
@@ -9,7 +14,10 @@ import { RestaurantService } from 'src/app/service/restaurant.service';
 })
 export class AddDishesComponent {
 
-  constructor(private restaurantService:RestaurantService, private fb:FormBuilder){}
+  constructor(private restaurantService:RestaurantService, private fb:FormBuilder,private snackBar:MatSnackBar){}
+
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   dishForm = this.fb.group({
     'dishName':[''],
@@ -64,7 +72,10 @@ export class AddDishesComponent {
       response=>{
 
         console.log(response);
-        alert("Dish Added Successfully....")
+        this.snackBar.open("Dish Added Successfully....","Ok",{
+          horizontalPosition:this.horizontalPosition,
+          verticalPosition:this.verticalPosition,
+        });
       }
     )
   }

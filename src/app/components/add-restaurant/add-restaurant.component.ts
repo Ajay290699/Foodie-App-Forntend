@@ -2,6 +2,11 @@ import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Restaurant } from 'src/app/model/restaurant/restaurant';
 import { RestaurantService } from 'src/app/service/restaurant.service';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-add-restaurant',
@@ -10,7 +15,10 @@ import { RestaurantService } from 'src/app/service/restaurant.service';
 })
 export class AddRestaurantComponent {
 
-  constructor(private restaurantService:RestaurantService, private fb:FormBuilder){}
+  constructor(private restaurantService:RestaurantService, private fb:FormBuilder,private snackBar:MatSnackBar){}
+
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   restaurantForm = this.fb.group({
     'restaurantName':[''],
@@ -38,7 +46,10 @@ emailId = localStorage.getItem("resOwnerEmail");
     this.restaurantService.addRestaurant(this.emailId,this.restaurantForm.value).subscribe(
       response=>{
         console.log(response);
-        alert("Restaurant Added Succesfully....")
+        this.snackBar.open("Restaurant added Successfully..","Ok",{
+          horizontalPosition:this.horizontalPosition,
+          verticalPosition:this.verticalPosition,
+        });
       }
     )
   }

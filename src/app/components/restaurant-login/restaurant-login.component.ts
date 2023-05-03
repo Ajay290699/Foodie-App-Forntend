@@ -2,6 +2,11 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RestaurantAuthService } from 'src/app/service/restaurant-auth.service';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-restaurant-login',
@@ -10,7 +15,10 @@ import { RestaurantAuthService } from 'src/app/service/restaurant-auth.service';
 })
 export class RestaurantLoginComponent {
 
-  constructor(private builder:FormBuilder, private resAuthService:RestaurantAuthService, private router:Router){}
+  constructor(private builder:FormBuilder, private resAuthService:RestaurantAuthService, private router:Router,private snackBar:MatSnackBar){}
+
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   loginForm = new FormGroup({
     'emailId':new FormControl('',[Validators.required, Validators.email]),
@@ -35,6 +43,10 @@ export class RestaurantLoginComponent {
         this.responseData = response;
         localStorage.setItem("restaurant-Owner-Token",this.responseData.token);
         localStorage.setItem("resOwnerEmail",this.responseData.emailId)
+        this.snackBar.open("Dished added to cart","Ok",{
+          horizontalPosition:this.horizontalPosition,
+          verticalPosition:this.verticalPosition,
+        });
         console.log(localStorage.getItem("resOwnerEmail"))
         console.log(localStorage.getItem("restaurant-Owner-Token"));
           this.router.navigateByUrl("restaurantDashboard");

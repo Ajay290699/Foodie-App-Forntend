@@ -2,7 +2,11 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { RestaurantSignUp } from 'src/app/model/restaurant/restaurant-sign-up';
 import { RestaurantAuthService } from 'src/app/service/restaurant-auth.service';
-import { UserAuthService } from 'src/app/service/user-auth.service';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-restaurant-signup',
@@ -11,7 +15,10 @@ import { UserAuthService } from 'src/app/service/user-auth.service';
 })
 export class RestaurantSignupComponent {
 
-  constructor(private fb:FormBuilder, private resAuthService:RestaurantAuthService){}
+  constructor(private fb:FormBuilder, private resAuthService:RestaurantAuthService,private snackBar:MatSnackBar){}
+
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   signupForm = new FormGroup({
     'emailId':new FormControl('',[Validators.required, Validators.email]),
@@ -38,7 +45,10 @@ export class RestaurantSignupComponent {
     this.resAuthService.restaurantOwnerRegistration(<RestaurantSignUp>this.signupForm.value).subscribe({
       next:data=>{
         this.receiveddata = data;
-        alert("Registered Successfully")
+        this.snackBar.open("Registered Successfully...","Ok",{
+          horizontalPosition:this.horizontalPosition,
+          verticalPosition:this.verticalPosition,
+        });
         console.log(this.receiveddata);
       }
     })

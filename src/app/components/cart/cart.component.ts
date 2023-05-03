@@ -1,5 +1,11 @@
 import { Component } from '@angular/core';
 import { UserService } from 'src/app/service/user.service';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-cart',
@@ -8,9 +14,13 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class CartComponent {
 
-  constructor(private userService:UserService){
+  constructor(private userService:UserService,private snackBar:MatSnackBar){
    
   }
+
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
+  
 ngOnInit(){
   this.getDishInTable();
 }
@@ -37,7 +47,10 @@ ngOnInit(){
     this.userService.deleteDishFromCart(dish).subscribe(
      response=>{
        console.log(response);
-       alert("removed dish");
+       this.snackBar.open("Dished removed","Ok",{
+        horizontalPosition:this.horizontalPosition,
+        verticalPosition:this.verticalPosition,
+      });
        this.sum=0;
       //  this.getDishInTable(); 
        this.ngOnInit();  
@@ -46,17 +59,5 @@ ngOnInit(){
      console.log(error);
    }
  }
-
-
-  // deleteDishFromCart(dish:any){
-  //    this.userService.deleteDishFromCart(dish).subscribe(
-  //     response=>{
-  //       console.log(response);
-  //       alert("removed dish");
-  //       this.getDishInTable();      }
-  //    )  ,(error:any)=>{
-  //     console.log(error);
-  //   }
-  // }
 
 }
