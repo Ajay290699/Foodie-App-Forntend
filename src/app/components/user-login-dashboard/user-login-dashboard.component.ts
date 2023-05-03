@@ -12,6 +12,7 @@ import { UserService } from 'src/app/service/user.service';
 export class UserLoginDashboardComponent {
 
   constructor(private restaurantService:RestaurantService, private userServcie:UserService){
+    console.log(this.getAllDishes);
     this.getAllRestaurant();
     this.getAllDishes();
   }
@@ -61,11 +62,16 @@ export class UserLoginDashboardComponent {
     }
   }
 
-
-  addToCart(dish:any)
+a:any;
+b:any;
+addToCart(dish:any)
 {
+  this.a=document.getElementById("i");
+
+        dish.quantity=this.a.value;
     this.userServcie.addDishesToUserCart(dish).subscribe(
       response=>{
+        
         console.log(response);
         alert("dish added to cart");
       }
@@ -73,5 +79,27 @@ export class UserLoginDashboardComponent {
     (error:any)=>{
       console.log(error);
     }
+}
+
+addDishToFavourite(dish:any){
+this.userServcie.addDishesToUserFavorite(dish).subscribe(
+  response=> {
+    alert("dish added in favorite.....");
+  },
+  (err:any)=>{
+    console.log(err);
+  }
+)
+}
+
+addResturantToFavourite(restaurant:any){
+  this.userServcie.addResturantToUserFavourite(restaurant).subscribe(
+    response=> {
+      alert("resturant added in favorite.....");
+    },
+    (err:any)=>{
+      console.log(err);
+    }
+  )
 }
 }

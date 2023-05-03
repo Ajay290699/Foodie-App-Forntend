@@ -1,6 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Dishes } from '../model/restaurant/dishes';
 
 @Injectable({
   providedIn: 'root'
@@ -13,21 +12,59 @@ export class UserService {
 
   // orderUrl
 
-  addDishesToUserCart(dish : Dishes){
+  addDishesToUserCart(Dish :any){
     let httpHeaders = new HttpHeaders({
-      'Authorization' : 'Bearer ' +localStorage.getItem("token")
+      'Authorization' : 'Bearer ' +localStorage.getItem("User_Token")
     })
     let requestOption = {headers : httpHeaders}
-    return this.httpclient.post(this.userServcieUrl+"addDishesToUserCart",dish,requestOption)
+    return this.httpclient.post(this.userServcieUrl+"addDishesToUserCart",Dish,requestOption)
   }
 
   getAllDishFromCart(){
     let httpHeaders = new HttpHeaders({
-      'Authorization' : 'Bearer ' +localStorage.getItem("token")
+      'Authorization' : 'Bearer ' +localStorage.getItem("User_Token")
     })
     let requestOption = {headers : httpHeaders}
     return this.httpclient.get(this.userServcieUrl+"getUserCartAllDishes",requestOption) 
   }
 
+  addDishesToUserFavorite(Dish :any){
+    let httpHeaders = new HttpHeaders({
+      'Authorization' : 'Bearer ' +localStorage.getItem("User_Token")
+    })
+    let requestOption = {headers : httpHeaders}
+    return this.httpclient.post(this.userServcieUrl+"addDishesToUserFavourite",Dish,requestOption)
+  }
+
+  addResturantToUserFavourite(Restaurant:any){
+    let httpHeaders = new HttpHeaders({
+      'Authorization' : 'Bearer ' +localStorage.getItem("User_Token")
+    })
+    let requestOption = {headers : httpHeaders}
+    return this.httpclient.post(this.userServcieUrl+"addRestaurantToUserFavourite",Restaurant,requestOption)
+  }
+  getAllDishFromFavorite(){
+    let httpHeaders = new HttpHeaders({
+      'Authorization' : 'Bearer ' +localStorage.getItem("User_Token")
+    })
+    let requestOption = {headers : httpHeaders}
+    return this.httpclient.get(this.userServcieUrl+"getUserFavouriteAllDishes",requestOption) 
+  }
+
+  getAllResturantFromFavourite(){
+    let httpHeaders = new HttpHeaders({
+      'Authorization' : 'Bearer ' +localStorage.getItem("User_Token")
+    })
+    let requestOption = {headers : httpHeaders}
+    return this.httpclient.get(this.userServcieUrl+"getUserFavouriteAllRestaurants",requestOption) 
+  }
+
+  deleteDishFromCart(dish:any){
+    let httpHeaders = new HttpHeaders({
+      'Authorization' : 'Bearer ' +localStorage.getItem("User_Token")
+    })
+    let requestOption = {headers : httpHeaders}
+    return this.httpclient.post(this.userServcieUrl+"deleteDishesFromUserCart",dish,requestOption) 
+  }
 
 }

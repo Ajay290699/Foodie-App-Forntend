@@ -23,13 +23,15 @@ body{
 }
 
 .card-image{
+    /* width: 500px; */
+    height: 200px;
     width: 100%;
     border-top-left-radius: 2em;
     border-top-right-radius: 2em;
 }
 
 .card-info-container{
-    padding: 2em 1em 2em;
+    padding: 1em 1em 1em;
 }
 
 .card-info-heading{
@@ -45,6 +47,7 @@ body{
 }
 
 .btn{
+    margin-top: -30px;
     background-color: #FFEB3B;
     outline: none;
     border: none;
@@ -56,7 +59,7 @@ body{
     -moz-border-radius: 3em;
     -ms-border-radius: 3em;
     -o-border-radius: 3em;
-    padding: 1em 2em;
+    /* padding: 1em 2em; */
     font-size: .7em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     cursor: pointer;
@@ -68,7 +71,7 @@ body{
 }
 
 .btn:hover{
-    background-color: black;
+    background-color: rgb(228, 87, 87);
     color: white;
 }
 
@@ -93,3 +96,10 @@ body{
     font-size: 1.5em;
     font-weight: bold;
 }
+
+.dish :hover{
+    background-color: rgb(63, 185, 106);
+    color: white;
+}
+
+
