@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Fruit } from 'src/app/model/fruit';
-import { FRUITS } from 'src/app/model/fruits';
-import {Dishes} from 'src/app/model/restaurant/dishes';
+// import { Fruit } from 'src/app/model/fruit';
+// import { FRUITS } from 'src/app/model/fruits';
+// import {Dishes} from 'src/app/model/restaurant/dishes';
 import { UserService } from 'src/app/service/user.service';
 import {
   MatSnackBar,
@@ -23,7 +23,7 @@ export class FavouriteComponent {
     this.getResturantInTable();
   }
 
-  demo:Fruit[]=FRUITS;
+  // demo:Fruit[]=FRUITS;
 
 
  dishes:any;
