@@ -7,6 +7,8 @@ import { AppModule } from '../app.module';
   providedIn: 'root'
 })
 export class UserAuthService {
+
+  isLoggedIn:boolean = false;
  
   constructor(private httpclient:HttpClient) { }
 
@@ -19,6 +21,10 @@ export class UserAuthService {
 
   userLogIn(user:any){
       return this.httpclient.post(this.userAuthBaseUrl+"/login",user);
+  }
+
+  loggedIn(){
+    this.isLoggedIn = true;
   }
 
   getUserImage(user:any){

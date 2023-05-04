@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class RestaurantAuthService {
 
+  isLoggedIn:boolean = false;
+
   constructor(private httpClient:HttpClient) { }
 
   resAuthUrl = "http://localhost:8081/owner-auth";
@@ -22,6 +24,10 @@ export class RestaurantAuthService {
   restaurantOwnerLogin(RestaurantOwner:any)
   {
     return this.httpClient.post(this.resAuthUrl+"/login/",RestaurantOwner)
+  }
+
+  loggedIn(){
+    this.isLoggedIn = true;
   }
 
 }

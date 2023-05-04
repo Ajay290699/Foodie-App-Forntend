@@ -39,6 +39,7 @@ export class RestaurantLoginComponent {
     console.log(this.loginForm.value);
     this.resAuthService.restaurantOwnerLogin(this.loginForm.value).subscribe({
       next:response=>{
+        this.resAuthService.loggedIn();
         console.log(response);
         this.responseData = response;
         localStorage.setItem("restaurant-Owner-Token",this.responseData.token);

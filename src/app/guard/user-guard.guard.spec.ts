@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GuardGuard } from './guard.guard';
+import { UserGuardGuard } from './user-guard.guard';
 
-describe('GuardGuard', () => {
-  let guard: GuardGuard;
+describe('UserGuardGuard', () => {
+  let guard: UserGuardGuard;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    guard = TestBed.inject(GuardGuard);
+    guard = TestBed.inject(UserGuardGuard);
   });
 
   it('should be created', () => {

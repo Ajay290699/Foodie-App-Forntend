@@ -47,6 +47,7 @@ verticalPosition: MatSnackBarVerticalPosition = 'top';
     this.service.userLogIn(this.loginForm.value).subscribe( data1=>{
       console.log(data1);
       this.responseData = data1
+      this.service.loggedIn();
       this.snackBar.open("Login successful..","Ok",{
         horizontalPosition:this.horizontalPosition,
         verticalPosition:this.verticalPosition,
