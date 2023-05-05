@@ -5,6 +5,7 @@ import {
   MatSnackBarHorizontalPosition,
   MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,7 +15,7 @@ import {
 })
 export class CartComponent {
 
-  constructor(private userService:UserService,private snackBar:MatSnackBar){
+  constructor(private userService:UserService,private snackBar:MatSnackBar,private router:Router){
    
   }
 
@@ -60,4 +61,28 @@ ngOnInit(){
    }
  }
 
+ clearCart(dish:any){
+  this.userService.deleteAllDishFromCart(dish).subscribe(
+    response=>{
+      console.log(response);
+      this.snackBar.open("Order Placed","Ok",{
+        horizontalPosition:this.horizontalPosition,
+        verticalPosition:this.verticalPosition,
+      });
+      this.router.navigateByUrl("thanks");
+    }
+  ),(error:any)=>{
+    console.log(error);
+ }
+
 }
+}
+
+// button
+// document.querySelectorAll('.truck-button').forEach(button =>{
+//   button.addEventListener('click',e=>{
+//     e.preventDefault();
+//     let box = button.querySelector('.box'),
+//     truck = button.querySelector('.truck');
+//   })
+// })

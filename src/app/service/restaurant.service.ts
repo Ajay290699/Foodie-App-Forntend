@@ -83,4 +83,8 @@ export class RestaurantService {
     return this.httpClient.get(this.restaurantServiceUrl+"/getAllDishes",requestOption)
   }
 
+  getOwnerById(id:any){
+    return this.httpClient.get(this.restaurantServiceUrl+"/getRestaurantOwnerById/"+id);
+  }
+
 }

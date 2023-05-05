@@ -37,6 +37,7 @@ import { AddDishesComponent } from './components/add-dishes/add-dishes.component
 import { UploadUserImageComponent } from './components/upload-user-image/upload-user-image.component';
 import { RestaurantHeaderComponent } from './components/restaurant-header/restaurant-header.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { ThanksComponent } from './components/thanks/thanks.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     AddRestaurantComponent,
     AddDishesComponent,
     UploadUserImageComponent,
-    RestaurantHeaderComponent
+    RestaurantHeaderComponent,
+    ThanksComponent
   ],
   imports: [
     BrowserModule,

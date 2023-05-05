@@ -67,6 +67,14 @@ export class UserService {
     return this.httpclient.post(this.userServcieUrl+"deleteDishesFromUserCart",dish,requestOption) 
   }
 
+  deleteAllDishFromCart(dish:any){
+    let httpHeaders = new HttpHeaders({
+      'Authorization' : 'Bearer ' +localStorage.getItem("User_Token")
+    })
+    let requestOption = {headers : httpHeaders}
+    return this.httpclient.post(this.userServcieUrl+"deleteAllDishesFromUserCart",dish,requestOption) 
+  }
+
   deleteDishFromFavourite(dish:any){
     let httpHeaders = new HttpHeaders({
       'Authorization' : 'Bearer ' +localStorage.getItem("User_Token")

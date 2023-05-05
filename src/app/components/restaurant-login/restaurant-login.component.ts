@@ -44,7 +44,8 @@ export class RestaurantLoginComponent {
         this.responseData = response;
         localStorage.setItem("restaurant-Owner-Token",this.responseData.token);
         localStorage.setItem("resOwnerEmail",this.responseData.emailId)
-        this.snackBar.open("Dished added to cart","Ok",{
+        localStorage.setItem("resOwnerName",this.responseData.resOwnerName);
+        this.snackBar.open("Login Succussfullly..","Ok",{
           horizontalPosition:this.horizontalPosition,
           verticalPosition:this.verticalPosition,
         });
