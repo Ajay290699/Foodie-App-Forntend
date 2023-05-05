@@ -55,6 +55,7 @@ this.d.password=this.signupForm.value.password;
         horizontalPosition:this.horizontalPosition,
         verticalPosition:this.verticalPosition,
       });
+      this.router.navigateByUrl('/userDashboard');
        }
     )
   }

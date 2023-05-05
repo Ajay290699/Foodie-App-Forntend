@@ -12,26 +12,9 @@ export class RestaurantDashboardComponent {
 
   constructor(private restaurantService:RestaurantService){
     this.getAllRestaurant();
-    // this.getOwnerById(this.id);
   }
 
   allRestaurant:any;
-
-  // id : any;
-  // onwer:RestaurantOwner | undefined;
-
-  // getOwnerById(id:any){
-  //   id = localStorage.getItem("resOwnerName");
-  //   this.id = localStorage.getItem("resOwnerName");
-  //   this.restaurantService.getOwnerById(id).subscribe(
-  //     res=>{
-  //       console.log(res);
-  //       this.onwer=res;
-  //     }
-  //   ),(error:any)=>{
-  //     console.log(error);
-  //   }
-  // }
 
   getAllRestaurant(){
     this.restaurantService.getRestaurant().subscribe(
