@@ -15,6 +15,8 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
 import { PaymentComponent } from './components/payment/payment.component';
 import { AddDishesComponent } from './components/add-dishes/add-dishes.component';
 import { AddRestaurantComponent } from './components/add-restaurant/add-restaurant.component';
+import { UserAuthService } from './service/user-auth.service';
+import { RestaurantAuthService } from './service/restaurant-auth.service';
 
 const routes: Routes = [
   {path:'home', component:HomeComponent},
