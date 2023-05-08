@@ -10,6 +10,8 @@ import { RestaurantService } from 'src/app/service/restaurant.service';
 })
 export class RestaurantDashboardComponent {
 
+  restaurantImagePath = "../../../assets/images/Restaurants";
+
   constructor(private restaurantService:RestaurantService){
     this.getAllRestaurant();
   }
