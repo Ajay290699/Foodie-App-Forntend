@@ -1,5 +1,5 @@
- <!-- <body class="image">
-    <app-header></app-header>
+ <body class="image">
+    <!-- <app-header></app-header> -->
     <form  class="form"  [formGroup]="signupForm">
         <div class="container">
         <h3>New Registration</h3>
@@ -7,19 +7,23 @@
     
            
 <div style="display: flex;justify-content: space-evenly; width: 100%;">
-                        <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
-                            <input matInput type="text" placeholder="First Name" id="firstName" formControlName="firstName">
-                        <mat-error *ngIf="firstName?.errors?.['required']" style="color: red;">
+                       <div>
+                        <input  type="text" placeholder="First Name" id="firstName" formControlName="firstName" style="width: 300px;">
+                        <span *ngIf="firstName?.errors?.['required']" style="color: red;">
                             First Name is required.
-                        </mat-error>
-                    </mat-form-field>
+                        </span>
+                       </div>
+
+                       <div>
+                        <input  type="text" placeholder="Last Name" id="lastName" style="width: 300px;"
+                        formControlName="lastName">
+                        <span *ngIf="lastName?.errors?.['required']" style="color: red;">
+                            Last Name is required.
+                        </span>
+                       </div>
                     
                     <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
-                        <input matInput type="text" placeholder="Last Name" id="lastName"
-                            formControlName="lastName">
-                            <mat-error *ngIf="lastName?.errors?.['required']" style="color: red;">
-                                Last Name is required.
-                            </mat-error>
+                        
                     </mat-form-field>
                 </div>
     
@@ -118,11 +122,10 @@
       </div>
     </form>
 </body>
-<app-footer></app-footer> -->
+<app-footer></app-footer>
 
 <!-- saumya -->
-<body class="image">
-    <!-- <app-header></app-header> -->
+<!-- <body class="image">
     <form  class="form"  [formGroup]="signupForm">
         <div class="container">
         <h3>New Registration</h3>
@@ -225,7 +228,7 @@
                 </select>  
               </mat-form-field>  
             <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
-                <input matInput type="text" placeholder="Pincode" id="pincode"
+                <input matInput type="text" placeholder="Pincode" id="pincode" 
                     formControlName="streetName">
                     <mat-error *ngIf="pincode?.errors?.['required']" style="color: red;">
                         Pincode is required.
@@ -234,13 +237,10 @@
       
     </div>
     <input style=" margin-top: 5px;" type="file"  (change)="onImageUpload($event)">  
-        <!-- <label>Profile Image Upload</label>
-        <input style="padding-top: 10px;" type="file" class="form-control" formControlName="image" placeholder="No file chosen"> -->
     
         <button (click)="sendSignupData()">Register</button>
       </div>
     </form>
 </body>
-<!-- <app-footer></app-footer> -->
 
-
+ -->

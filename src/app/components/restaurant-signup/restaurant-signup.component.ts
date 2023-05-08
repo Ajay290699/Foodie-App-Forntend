@@ -7,6 +7,7 @@ import {
   MatSnackBarHorizontalPosition,
   MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-restaurant-signup',
@@ -15,7 +16,7 @@ import {
 })
 export class RestaurantSignupComponent {
 
-  constructor(private fb:FormBuilder, private resAuthService:RestaurantAuthService,private snackBar:MatSnackBar){}
+  constructor(private fb:FormBuilder, private resAuthService:RestaurantAuthService,private snackBar:MatSnackBar, private router:Router){}
 
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
@@ -49,6 +50,7 @@ export class RestaurantSignupComponent {
           horizontalPosition:this.horizontalPosition,
           verticalPosition:this.verticalPosition,
         });
+        this.router.navigateByUrl("/restaurantLogin");
         console.log(this.receiveddata);
       }
     })

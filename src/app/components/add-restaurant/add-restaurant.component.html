@@ -71,10 +71,18 @@
           <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="restaurantName">
           <label for="floatingInput">Restaurant Name</label>
         </div>
+
+        
+
         <div class="form-floating">
           <input type="text" class="form-control" id="floatingPassword" placeholder="Password" formControlName="location">
           <label for="floatingPassword">Location</label>
         </div>
+
+        <div class="form-floating">
+          <input style=" margin-top: 5px;" type="file"  (change)="onImageUpload($event)" formControlName="resImage">  
+        </div>
+        <br>
 
         <!-- <div class="mb-3">
           <label for="formFile" class="form-label">Upload picture of Restaurant</label>
