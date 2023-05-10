@@ -15,14 +15,6 @@ export class UserLoginHeaderComponent {
 
   user:any={};
 
-  // getUserImage(userName:any){
-  //   this.userService.getUserImage(userName).subscribe(
-  //     res=>{
-  //         this.user = res;
-  //         console.log(res);
-  //     }
-  //   )
-  // }
 
 getUserDetails(){
   this.userService.getUser().subscribe(

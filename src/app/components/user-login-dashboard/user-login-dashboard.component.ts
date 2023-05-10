@@ -25,7 +25,26 @@ export class UserLoginDashboardComponent {
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
 
-  allRestaurant:any;
+  searchText:string="";
+
+  search(){
+    console.log(this.searchText);
+    if(this.searchText == null){
+      this.getAllRestaurant();
+    }
+    else{
+      this.allRestaurant= this.allRestaurant.filter(data => data.restaurantName?.startsWith(this.searchText));
+      console.log(this.allRestaurant);
+      // alert("test")
+    }
+  }
+
+  clear(){
+    this.searchText= '';
+    this.getAllRestaurant();
+  }
+
+  allRestaurant:Restaurant[]=[];
 
   getAllRestaurant(){
     this.restaurantService.getRestaurant().subscribe(

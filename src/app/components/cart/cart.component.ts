@@ -15,9 +15,7 @@ import { Router } from '@angular/router';
 })
 export class CartComponent {
 
-  constructor(private userService:UserService,private snackBar:MatSnackBar,private router:Router){
-   
-  }
+  constructor(private userService:UserService,private snackBar:MatSnackBar,private router:Router){ }
 
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';

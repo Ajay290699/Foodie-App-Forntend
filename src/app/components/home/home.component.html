@@ -23,7 +23,8 @@
                 <p class="slogan1">Foodei</p>
                 <p class="slogan2">Discover the best food in Mumbai.</p>
             </div>
-            <select class="select" id="select"><i class="fas fa-map-marker-alt"></i>
+            <form>
+              <select class="select" id="select">
                 <option>select your location</option>
                 <option>Chandigarh</option>
                 <option>Himachal Pradesh</option>
@@ -54,7 +55,8 @@
                 <option>madurai</option>
                 <option>Srinagar</option>
             </select>
-            <input type="text" class="searchBar" placeholder="Search for restaurant, cuisine or a dish">
+            <input type="text" class="searchBar" placeholder="Search for restaurant, cuisine or a dish" (input)="search()">
+            </form>
         </div>
         <div class="marquee mt">
         <div class="marquee__content">

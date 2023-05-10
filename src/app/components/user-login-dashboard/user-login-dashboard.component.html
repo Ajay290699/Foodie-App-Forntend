@@ -5,10 +5,13 @@
 </div> -->
 
 <div class="background">
-    <div class="searchbar">
-        <input type="text" placeholder="Search for restaurant and dishes">
-        <button><i class="fa fa-search"></i></button>
-    </div>
+    <!-- <form role="search">  -->
+        <div class="searchbar">
+            <input type="text" [(ngModel)]="searchText" (input)="search()" placeholder="Search for restaurant and dishes">
+            <!-- <button><i class="fa fa-search"></i></button> -->
+            <button (click)="clear()">clear</button>
+        </div>
+    <!-- </form> -->
 </div>
 
 <div class="carousel">

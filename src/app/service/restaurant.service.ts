@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Dishes } from '../model/restaurant/dishes';
+import { Restaurant } from '../model/restaurant/restaurant';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class RestaurantService {
       'Authorization' : 'Bearer ' +localStorage.getItem("restaurant-Owner-Token")
     });
     let requestOption = {headers : httpHeaders}
-    return this.httpClient.get(this.restaurantServiceUrl+"/getAllRestaurant");
+    return this.httpClient.get<Restaurant[]>(this.restaurantServiceUrl+"/getAllRestaurant");
     console.log(this.restaurantServiceUrl);
   }
 
