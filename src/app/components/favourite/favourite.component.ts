@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-// import { Fruit } from 'src/app/model/fruit';
-// import { FRUITS } from 'src/app/model/fruits';
-// import {Dishes} from 'src/app/model/restaurant/dishes';
 import { UserService } from 'src/app/service/user.service';
 import {
   MatSnackBar,
   MatSnackBarHorizontalPosition,
   MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
+import { Restaurant } from 'src/app/model/restaurant/restaurant';
 @Component({
   selector: 'app-favourite',
   templateUrl: './favourite.component.html',
@@ -30,7 +28,9 @@ export class FavouriteComponent {
  getDishInTable(){
   this.userService.getAllDishFromFavorite().subscribe(
     res=>{
-      this.dishes = res;
+      // this.allRestaurant = response as Restaurant[];
+      this.dishes = res as Restaurant[];
+      console.log(this.dishes.dishImage);
     }
   ),(error:any)=>{
     console.log(error);
