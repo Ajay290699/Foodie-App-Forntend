@@ -35,6 +35,10 @@ export class AddRestaurantComponent {
     return this.restaurantForm.get('location')
 }
 
+get resImage(){
+  return this.restaurantForm.get('resImage')
+}
+
 emailId = localStorage.getItem("resOwnerEmail");
 // emailId:string="admin@gmail.com";
 
@@ -45,9 +49,12 @@ d:any = {}
     // const body = JSON.stringify(this.restaurantForm.value); 
     console.log(this.restaurantForm.value);
     this.imageUploadAction();
-    this.d.pi=this.dbImage;
+    this.d.resImage=this.dbImage;
+    this.d.location=this.restaurantForm.value.location;
+    this.d.restaurantName=this.restaurantForm.value.restaurantName;
+    console.log(this.d);
     console.log(this.emailId)
-    this.restaurantService.addRestaurant(this.emailId,this.restaurantForm.value).subscribe(
+    this.restaurantService.addRestaurant(this.emailId,this.d).subscribe(
       response=>{
         console.log(response);
         this.snackBar.open("Restaurant added Successfully..","Ok",{

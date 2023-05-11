@@ -55,27 +55,26 @@ resturantes:any;
   }
 
   a:any;
-b:any;
-addToCart(dish:any)
-{
-  this.a=document.getElementById("i");
-
-        dish.quantity=this.a.value;
-    this.userService.addDishesToUserCart(dish).subscribe(
-      response=>{
-        
-        console.log(response);
-        this.snackBar.open("Dished added to cart","Ok",{
-          horizontalPosition:this.horizontalPosition,
-          verticalPosition:this.verticalPosition,
-        });
-        // alert("dish added to cart");
+  b:any;
+    addToCart(dish:any,i:any)
+  {
+        this.a=document.getElementById("n"+i);
+  
+          dish.quantity=this.a.value;
+          this.userService.addDishesToUserCart(dish).subscribe(
+          response=>{
+          
+          console.log(response);
+          this.snackBar.open("Dish added to cart","Ok",{
+            horizontalPosition:this.horizontalPosition,
+            verticalPosition:this.verticalPosition,
+          });
+        }
+      ),
+      (error:any)=>{
+        console.log(error);
       }
-    ),
-    (error:any)=>{
-      console.log(error);
-    }
-}
+  }
 
 x:any;
 

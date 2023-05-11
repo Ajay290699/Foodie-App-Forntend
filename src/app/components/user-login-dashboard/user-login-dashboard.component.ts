@@ -33,7 +33,7 @@ export class UserLoginDashboardComponent {
       this.getAllRestaurant();
     }
     else{
-      this.allRestaurant= this.allRestaurant.filter(data => data.restaurantName?.startsWith(this.searchText));
+      this.allRestaurant= this.allRestaurant.filter((data: { restaurantName: string; }) => data.restaurantName?.startsWith(this.searchText));
       console.log(this.allRestaurant);
       // alert("test")
     }
@@ -44,7 +44,7 @@ export class UserLoginDashboardComponent {
     this.getAllRestaurant();
   }
 
-  allRestaurant:Restaurant[]=[];
+  allRestaurant:any;
 
   getAllRestaurant(){
     this.restaurantService.getRestaurant().subscribe(

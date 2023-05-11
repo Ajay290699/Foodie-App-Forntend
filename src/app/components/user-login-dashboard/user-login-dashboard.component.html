@@ -26,7 +26,7 @@
 
     <div class="card" *ngFor="let restaurant of allRestaurant" >
         <div class="card-image-container">
-            <img src="../../../assets/images/Restaurants/A-Reverie.png" alt="" class="card-image">
+            <img src="http://localhost:8082/restaurant-service/images/{{restaurant.resImage}}" alt="" class="card-image">
         </div>
         <div style="padding: 10px;">
             <h1 class="card-info-heading" style="margin-bottom: -2px; margin-top: 5px; margin-left: -5px; font-size: 30px; font-weight: 600;">{{restaurant.restaurantName}}</h1>
@@ -46,7 +46,7 @@
 
     <div class="card" *ngFor="let dish of allDishes let index=index" >
         <div class="card-image-container">
-            <img src="../../../assets/images/Dishes/Dumplings.jpg" alt="" class="card-image">
+            <img src="http://localhost:8082/restaurant-service/dishImages/{{dish.dishImage}}" alt="" class="card-image">
         </div>
         <div style="padding: 10px;">
             <h1 class="card-info-heading" style="margin-bottom: -2px; margin-top: 5px; margin-left: -5px; font-size: 30px; font-weight: 600;">{{dish.dishName}}</h1>

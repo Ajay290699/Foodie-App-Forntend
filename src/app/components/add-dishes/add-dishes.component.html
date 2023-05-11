@@ -97,6 +97,11 @@
               <input type="number" class="form-control" id="floatingPassword" placeholder="Password"formControlName="dishPrice">
               <label for="floatingPassword">Price</label>
             </div>
+
+            <div class="form-floating">
+              <input style=" margin-top: 5px;" type="file"  (change)="onImageUpload($event)" formControlName="dishImage">  
+            </div>
+            <br>
             <!-- <div class="mb-3">
               <label for="formFile" class="form-label">Upload picture of dish</label>
               <input class="form-control" type="file" id="formFile">

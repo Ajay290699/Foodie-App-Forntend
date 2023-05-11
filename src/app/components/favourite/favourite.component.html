@@ -27,7 +27,7 @@
                     <div class=" mb-3" style="width: 350px; margin: 24px;">
     <div class="card">
         <div class="card-image-container">
-            <img src="../../../assets/images/friedrice.png" alt="" class="card-image">
+            <img src="http://localhost:8082/restaurant-service/images/{{i.resImage}}" alt="" class="card-image">
         </div>
 
         <div class="card-info-container">
@@ -53,21 +53,22 @@
 
     <div *ngIf="dishes != 0"> 
         <h1 style="padding-left: 20px; background-color: beige;">Your Dishes</h1>
-        <div  class=" row gy-5 me-3" style="display: inline-flex;" *ngFor="let dish of dishes" >
+        <div  class=" row gy-5 me-3" style="display: inline-flex;" *ngFor="let dish of dishes let index=index" >
                         
             <div class=" mb-3" style="width: 350px; margin: 24px;">
 <div class="card" >
 <div class="card-image-container">
-    <img src="../../../assets/images/dosa.png" alt="" class="card-image">
+    <img src="http://localhost:8082/restaurant-service/dishImages/{{dish.dishImage}}" alt="" class="card-image">
 </div>
 <div style="padding: 10px;">
     <h1 class="card-info-heading" style="margin-bottom: -2px; margin-top: 5px; font-size: 30px; font-weight: 600;">{{dish.dishName}} </h1>
     <h1 style="margin-bottom: -5px;">&#8377; {{dish.dishPrice}}</h1>
+    <h3><input type="number" id="n{{index}}" value="1" minlength="1"></h3>
    <p>Type : {{dish.type}}</p>
 </div>
     <div style="display: inline-block;">
         <button (click)="deleteDishFromFavourite(dish)" class="delete" id="a"><i class="fa fa-trash" style="font-size: 30px;"></i></button>
-        <button (click)="addToCart(dish)" id="i" class="btn1" style="margin-top: 5px;"><span class="material-icons">
+        <button (click)="addToCart(dish,index)" id="i" class="btn1" style="margin-top: 5px;"><span class="material-icons">
         add_shopping_cart
         </span></button>
     </div>
