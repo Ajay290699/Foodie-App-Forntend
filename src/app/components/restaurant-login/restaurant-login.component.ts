@@ -20,8 +20,10 @@ export class RestaurantLoginComponent {
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
 
+  emailpattern='^[a-z0-9._%+-]+@[a-z]+\.[a-z]{2,4}$'  
+
   loginForm = new FormGroup({
-    'emailId':new FormControl('',[Validators.required, Validators.email]),
+    'emailId':new FormControl('',[Validators.required, Validators.pattern(this.emailpattern)]),
     'password': new FormControl('',[Validators.required,Validators.minLength(8)])
   })
 
@@ -45,7 +47,7 @@ export class RestaurantLoginComponent {
         localStorage.setItem("restaurant-Owner-Token",this.responseData.token);
         localStorage.setItem("resOwnerEmail",this.responseData.emailId)
         localStorage.setItem("resOwnerName",this.responseData.resOwnerName);
-        this.snackBar.open("Login Succussfullly..","Ok",{
+        this.snackBar.open("Login Successfully..","Ok",{
           horizontalPosition:this.horizontalPosition,
           verticalPosition:this.verticalPosition,
         });

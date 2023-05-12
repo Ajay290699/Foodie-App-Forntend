@@ -23,7 +23,9 @@ verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   phonePattern = '^[7-9][0-9]{9}$';
   passwordPattern = "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$";
-  emailpattern='^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
+  // emailpattern='^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
+  
+  emailpattern='^[a-z0-9._%+-]+@[a-z]+\.[a-z]{2,4}$'
   
 
   loginForm= new FormGroup({

@@ -1,3 +1,13 @@
+.addDish{
+    display: inline-block;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 39%;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px 5px grey;
+    margin-bottom: 100px;
+}
+
 .h1{
     font-size: 60px;
     font-weight: 700;
@@ -16,8 +26,6 @@ h2{
     margin-bottom: 50px;
     padding-left: 20px;
 }
-
-
 .card{
     display: inline-block;
     max-width: 400px;

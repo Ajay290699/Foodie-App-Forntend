@@ -23,16 +23,23 @@
     color: white;
   }
   .select{
-    margin-top: 10px;
-    margin-left: 25%;
+    /* margin-top: 10px; */
+    margin-top: -10px;
+    margin-left: 32%;
     padding: 15px;
+  }
+  .btn{
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 3px;
+    /* padding-top: 12px; */
   }
   #select{
     border-radius: 5px;
   }
   .searchBar{
-    width: 600px;
-    padding: 15px;
+    width: 500px;
+    padding: 5px;
     border-radius: 5px;
   }
   .marquee {
@@ -86,14 +93,14 @@
   .mt{
     margin-top: 310px;
   }
-  .card{
+  .card1{
     margin-top: -50px;
     padding: 20px;
     padding-left: 120px;
     margin-top: 50px;
     background-color: rgba(242, 242, 242, 0.673);
   }
-  .card h1{
+  .card1 h1{
     font-weight: 500;
     font-size: 40px;
     margin-left: 90px;
@@ -102,3 +109,44 @@
   .footer{
     margin-top: 100px;
   }
+
+  /*  */
+
+  .card{
+    display: inline-block;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
+}
+.pad{
+    padding: 10px;
+}
+
+img{
+    height: 200px;
+    width: 400px;
+}
+.card h2{
+    font-size: 30px;
+    font-weight: 500;
+    background-color: white;
+    margin-bottom: 0;
+}
+.card-container{
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* max-width: 1200px; */
+}
+#r{
+  padding-left: 20px;
+}
+
+
+  /*  */
+  

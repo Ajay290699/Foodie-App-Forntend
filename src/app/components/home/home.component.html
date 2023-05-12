@@ -1,20 +1,3 @@
-<!-- <p>
-    <mat-toolbar>
-     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <img src="../../images/FoodieApp.jpeg" alt="">
-    <span>My App</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-     <mat-icon>share</mat-icon>
-   </button>
-  </mat-toolbar>
-  </p>
-  <img src="../../images/FoodieApp.jpeg" alt=""> -->
 <body>
   <app-header></app-header>
     <div class="backgroundImage">
@@ -23,8 +6,8 @@
                 <p class="slogan1">Foodei</p>
                 <p class="slogan2">Discover the best food in Mumbai.</p>
             </div>
-            <form>
-              <select class="select" id="select">
+            <!-- <form> -->
+              <!-- <select class="select" id="select">
                 <option>select your location</option>
                 <option>Chandigarh</option>
                 <option>Himachal Pradesh</option>
@@ -54,28 +37,64 @@
                 <option>Coimbatore</option>
                 <option>madurai</option>
                 <option>Srinagar</option>
-            </select>
-            <input type="text" class="searchBar" placeholder="Search for restaurant, cuisine or a dish" (input)="search()">
-            </form>
+            </select> -->
+            <input type="text" class="searchBar select" placeholder="Search for restaurant" [(ngModel)]="searchText" (input)="search()">
+            <button id="btn" (click)="clear()">clear</button>
+            <!-- </form> -->
         </div>
-        <div class="marquee mt">
-        <div class="marquee__content">
-          POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp;  POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp;  POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp;   POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp;
-        </div>
-        </div>
-        <section id="cuisineTrending">
-          <app-cuisine-carousel></app-cuisine-carousel>
-         </section>
+
         
-        <div class="marquee">
-            <div class="marquee__content">
-              RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;
+          <!-- <div class="flex1" *ngIf="allRestaurant != 0">
+            <div class="card-container1" *ngFor="let restaurant of allRestaurant">
+              <div class="card1">
+                <img class="img1" src="http://localhost:8082/restaurant-service/images/{{restaurant.resImage}}" alt="#">
+                <div class="pad1">
+                  <h2>{{restaurant.restaurantName}}</h2>
+                  <h3>Location : {{restaurant.location}}</h3>
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus necessitatibus laborum quia animi iste nostrum.</p>
+                </div>
+              </div>
             </div>
-        </div>
-        
-        <div class="card">
-          <h1>Top food's and places for you</h1>
-          <app-cards ></app-cards>
+          </div> -->
+        <div>
+
+          <div class="marquee mt">
+            <div class="marquee__content">
+              POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp;  POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp;  POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp;   POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp; POPULAR CUISINE   &nbsp;&nbsp;&nbsp;&nbsp;  POPULAR CUISINE  &nbsp;&nbsp;&nbsp;
+            </div>
+            </div>
+            <section id="cuisineTrending">
+              <app-cuisine-carousel></app-cuisine-carousel>
+             </section>
+            
+            <div class="marquee">
+                <div class="marquee__content">
+                  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;  RESTAURANT   &nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+
+            <div class="r">
+              <h1 id="r">Restaurant :</h1>
+              <div class="flex">
+                <div class="card-container" *ngFor="let restaurant of allRestaurant">
+                  <div class="card">
+                    <img src="http://localhost:8082/restaurant-service/images/{{restaurant.resImage}}" alt="#">
+                    <div class="pad">
+                      <h2>{{restaurant.restaurantName}}</h2>
+                      <h3>Location : {{restaurant.location}}</h3>
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus necessitatibus laborum quia animi iste nostrum.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            
+            <div class="card1">
+              <h1>Top food's and places for you</h1>
+              <app-cards ></app-cards>
+            </div>
+
         </div>
 
         <!-- <div class="app">

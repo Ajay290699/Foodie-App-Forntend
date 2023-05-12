@@ -57,7 +57,7 @@ d:any = {}
     this.restaurantService.addRestaurant(this.emailId,this.d).subscribe(
       response=>{
         console.log(response);
-        this.snackBar.open("Restaurant added Successfully..","Ok",{
+        this.snackBar.open("Your Restaurant added Successfully..","Ok",{
           horizontalPosition:this.horizontalPosition,
           verticalPosition:this.verticalPosition,
         });

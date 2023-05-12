@@ -124,6 +124,7 @@
 <app-footer></app-footer> -->
 
 <!-- saumya -->
+
 <body class="image">
     <form  class="form"  [formGroup]="signupForm">
         <div class="container">
@@ -133,9 +134,12 @@
            
 <div style="display: flex;justify-content: space-evenly; width: 100%;">
                         <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
-                            <input matInput type="text" placeholder="First Name" id="firstName" formControlName="firstName">
+                            <input matInput type="text" minlength="3" placeholder="First Name" id="firstName" formControlName="firstName">
                         <mat-error *ngIf="firstName?.errors?.['required']" style="color: red;">
                             First Name is required.
+                        </mat-error>
+                        <mat-error *ngIf="firstName?.errors?.['minlength']" style="color: red;">
+                            First Name should have atleast 3 character
                         </mat-error>
                     </mat-form-field>
                     
@@ -144,6 +148,9 @@
                             formControlName="lastName">
                             <mat-error *ngIf="lastName?.errors?.['required']" style="color: red;">
                                 Last Name is required.
+                            </mat-error>
+                            <mat-error *ngIf="firstName?.errors?.['minlength']" style="color: red;">
+                                Last Name should have atleast 3 character
                             </mat-error>
                     </mat-form-field>
                 </div>
@@ -154,7 +161,7 @@
             <mat-error *ngIf="email?.errors?.['required']" style="color: red;">
                 Email is required.
             </mat-error>
-            <mat-error *ngIf="email?.errors?.['email']" style="color: red;">
+            <mat-error *ngIf="email?.errors?.['pattern']" style="color: red;">
                Enter Valid Email.
             </mat-error>
         </mat-form-field>
@@ -256,4 +263,4 @@
     </form>
 </body>
 
-
+ 

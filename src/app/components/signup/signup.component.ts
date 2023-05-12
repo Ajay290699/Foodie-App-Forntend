@@ -21,10 +21,12 @@ export class SignupComponent {
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
 
+  emailpattern='^[a-z0-9._%+-]+@[a-z]+\.[a-z]{2,4}$'
+
   signupForm= new FormGroup({
-    'firstName': new FormControl('',Validators.required),
-    'lastName':new FormControl('',Validators.required),
-    'email':new FormControl('',[Validators.required,Validators.email]),
+    'firstName': new FormControl('',[Validators.required,Validators.minLength(3)]),
+    'lastName':new FormControl('',[Validators.required,Validators.minLength(3)]),
+    'email':new FormControl('',[Validators.required,Validators.pattern(this.emailpattern)]),
     'password':new FormControl('',[Validators.required,Validators.pattern('^[A-Za-z0-9._%+-]{8,}')]),  
      'mobileNo':new FormControl('',Validators.pattern(/^[789]\d{9,9}$/)),
      'buildingName':new FormControl('',Validators.required),

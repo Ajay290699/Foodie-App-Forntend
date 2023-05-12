@@ -15,9 +15,8 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
 import { PaymentComponent } from './components/payment/payment.component';
 import { AddDishesComponent } from './components/add-dishes/add-dishes.component';
 import { AddRestaurantComponent } from './components/add-restaurant/add-restaurant.component';
-import { UserAuthService } from './service/user-auth.service';
-import { RestaurantAuthService } from './service/restaurant-auth.service';
 import { ThanksComponent } from './components/thanks/thanks.component';
+import { ViewComponent } from './components/view/view.component';
 
 const routes: Routes = [
   {path:'home', component:HomeComponent},
@@ -34,6 +33,7 @@ const routes: Routes = [
   {path:'addDish',component:AddDishesComponent},
   {path:'addRestaurant',component:AddRestaurantComponent},
   {path:'forgetPassword',component:ForgetPasswordComponent},
+  {path:'view',component:ViewComponent},
   {path:'thanks',component:ThanksComponent},
   {path:'',redirectTo:'/home',pathMatch:'full'},
   {path:'**',component:PageNotFoundComponent}

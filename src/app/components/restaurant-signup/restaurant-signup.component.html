@@ -13,7 +13,7 @@
                         <mat-error *ngIf="emailId?.errors?.['required']" style="color: red;">
                             Email is required.
                         </mat-error>
-                        <mat-error *ngIf="emailId?.errors?.['email']" style="color: red;">
+                        <mat-error *ngIf="emailId?.errors?.['pattern']" style="color: red;">
                            Enter Valid Email.
                         </mat-error>
                     </mat-form-field>
@@ -24,6 +24,9 @@
                         <input type="text" placeholder="Restaurant Owner Name" matInput formControlName="ownerName">
                         <mat-error *ngIf="ownerName?.errors?.['required']" style="color: red;">
                             Owner Name is required.
+                        </mat-error>
+                        <mat-error *ngIf="ownerName?.errors?.['minlength']" style="color: red;">
+                            Owner Name should have atleast 3 character.
                         </mat-error>
                     </mat-form-field>
                 </div>

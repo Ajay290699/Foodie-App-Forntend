@@ -11,7 +11,7 @@
               <mat-error *ngIf="emailId?.errors?.['required']" style="color: orange;">
                 Email is required.
             </mat-error>
-            <mat-error *ngIf="emailId?.errors?.['email']" style="color: orange;">
+            <mat-error *ngIf="emailId?.errors?.['pattern']" style="color: orange;">
                Enter Valid Email.
             </mat-error>
           </mat-form-field>
@@ -30,7 +30,7 @@
         <br> <br>
         </div>
         <button mat-raised-button color="accent">Login</button>
-        <p>Don't have an account? <a routerLink="signinView" >Register here</a></p> 
+        <p>Don't have an account? <a routerLink="/restaurantRegister" >Register here</a></p> 
       </div>
       <div>
         <img src="https://images.unsplash.com/photo-1593819559713-743d364eb059?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"

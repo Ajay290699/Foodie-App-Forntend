@@ -38,7 +38,7 @@
             </p>
         </div>
         <button (click)="addResturantToFavourite(restaurant)" class="btn" style="margin-top: 5px;"><i style="font-size: 30px;" class="fa fa-heart"></i></button>
-        </div>
+    </div>
 </div>
 
 <div>
@@ -51,8 +51,8 @@
         <div style="padding: 10px;">
             <h1 class="card-info-heading" style="margin-bottom: -2px; margin-top: 5px; margin-left: -5px; font-size: 30px; font-weight: 600;">{{dish.dishName}}</h1>
             <h1 style="margin-bottom: -5px; margin-left: -5px;">{{dish.type}}</h1>
-                <h3>{{dish.dishPrice}}</h3>
-                <h3><input type="number" id="n{{index}}" value="1" minlength="1"></h3>
+                <h3>&#8377; {{dish.dishPrice}}</h3>
+                <h3>Quantity : <input type="number" id="n{{index}}" value="1" minlength="1"></h3>
             <br/>
         </div>
         <button (click)="addDishToFavourite(dish)" class="btn1" style="margin-top: 5px;"><i style="font-size: 20px;" class="fa fa-heart"></i></button>
