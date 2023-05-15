@@ -57,9 +57,15 @@ this.d.password=this.signupForm.value.password;
         horizontalPosition:this.horizontalPosition,
         verticalPosition:this.verticalPosition,
       });
-      this.router.navigateByUrl('/userDashboard');
+      this.router.navigateByUrl('/userLogin');
        }
-    )
+    ),
+    (error:any )=>{
+      this.snackBar.open("Email Already Exist's","Ok",{
+        horizontalPosition:this.horizontalPosition,
+        verticalPosition:this.verticalPosition,
+      });
+    }
   }
   
 

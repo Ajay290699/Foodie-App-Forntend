@@ -56,7 +56,13 @@ export class RestaurantSignupComponent {
         this.router.navigateByUrl("/restaurantLogin");
         console.log(this.receiveddata);
       }
-    })
+    }),
+    (error:any )=>{
+      this.snackBar.open("Email Already Exist's","Ok",{
+        horizontalPosition:this.horizontalPosition,
+        verticalPosition:this.verticalPosition,
+      });
   }
+}
 
 }

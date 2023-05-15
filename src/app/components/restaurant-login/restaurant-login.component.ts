@@ -55,7 +55,13 @@ export class RestaurantLoginComponent {
         console.log(localStorage.getItem("restaurant-Owner-Token"));
           this.router.navigateByUrl("restaurantDashboard");
       }
-    })
+    }),
+    (error :any)=>{
+      this.snackBar.open("Invalid credentials","Ok",{
+        horizontalPosition:this.horizontalPosition,
+        verticalPosition:this.verticalPosition,
+      });
+    }
   }
 
 }
