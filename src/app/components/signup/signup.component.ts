@@ -34,7 +34,7 @@ export class SignupComponent {
      'city':new FormControl('',Validators.required),
      'state':new FormControl('',Validators.required),
      'flatNo':new FormControl('',Validators.required),
-     'pincode':new FormControl('',Validators.required),
+     'pincode':new FormControl('',[Validators.required,Validators.pattern('^\d{6}$')]),
      'image':new FormControl('',Validators.required)
        
   })

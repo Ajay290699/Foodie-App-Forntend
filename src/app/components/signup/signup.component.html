@@ -168,13 +168,12 @@
        
 
      <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
-        <input matInput type="password" placeholder="Password" id="password" formControlName="password">
+        <input matInput type="password" placeholder="Example@123" id="password" formControlName="password">
     <mat-error *ngIf="password?.errors?.['required']" style="color: red;">
         Password is required.
     </mat-error>
-    <mat-error *ngIf="password?.errors?.['pattern']" style="color: red;">
-        Password should have min 8 letter password, with at least a symbol, upper and lower case letters
-        and a number.
+    <mat-error *ngIf="password?.errors?.['pattern']" style="color: red; width: 700px;">
+        Password should have min 8 letter password.
     </mat-error>
 
 </mat-form-field>
@@ -237,21 +236,22 @@
                     <option value="Kerala">Kerala</option>
                     <option value="Madhya Pradesh">Madhya Pradesh</option>
                     <option value="Maharashtra">Maharashtra</option>
-                    <option value="Japan">Japan</option> 
-                    <option value="Mumbai">Mumbai</option>
-                    <option value="Karnataka">Karnataka</option>
-                    <option value="Japan">Japan</option>
-                    <option value="Delhi">Delhi</option>
-                    <option value="Mumbai">Mumbai</option>
-                    <option value="Karnataka">Karnataka</option>
-                    <option value="Japan">Japan</option> 
+                    <option value="Uttar Pradesh">Uttar Pradesh</option> 
+                    <option value="Kashmir">Kashmir</option>
+                    <option value="Sikkhim">Sikkhim</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Uttaranchal">Uttaranchal</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
                 </select>  
               </mat-form-field>  
             <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
-                <input matInput type="text" placeholder="Pincode" id="pincode" 
-                    formControlName="streetName">
+                <input matInput type="number" placeholder="Pincode" id="pincode" 
+                    formControlName="pincode">
                     <mat-error *ngIf="pincode?.errors?.['required']" style="color: red;">
                         Pincode is required.
+                    </mat-error>
+                    <mat-error *ngIf="pincode?.errors?.['pattern']" style="color: red;">
+                        Pincode should have atleast 6 no
                     </mat-error>
             </mat-form-field>
       
