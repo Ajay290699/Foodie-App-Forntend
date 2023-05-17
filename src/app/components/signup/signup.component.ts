@@ -27,14 +27,14 @@ export class SignupComponent {
     'firstName': new FormControl('',[Validators.required,Validators.minLength(3)]),
     'lastName':new FormControl('',[Validators.required,Validators.minLength(3)]),
     'email':new FormControl('',[Validators.required,Validators.pattern(this.emailpattern)]),
-    'password':new FormControl('',[Validators.required,Validators.pattern('^[A-Za-z0-9._%+-]{8,}')]),  
+    'password':new FormControl('',[Validators.required,Validators.pattern('^[A-Za-z0-9._%+-]{8,}')]),    
      'mobileNo':new FormControl('',Validators.pattern(/^[789]\d{9,9}$/)),
      'buildingName':new FormControl('',Validators.required),
      'streetName':new FormControl('',Validators.required),
      'city':new FormControl('',Validators.required),
      'state':new FormControl('',Validators.required),
      'flatNo':new FormControl('',Validators.required),
-     'pincode':new FormControl('',[Validators.required,Validators.pattern('^\d{6}$')]),
+     'pincode':new FormControl('',[Validators.required,Validators.minLength(6)]),
      'image':new FormControl('',Validators.required)
        
   })

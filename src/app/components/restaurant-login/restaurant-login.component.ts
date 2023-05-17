@@ -39,8 +39,8 @@ export class RestaurantLoginComponent {
 
   sendLoginData(){
     console.log(this.loginForm.value);
-    this.resAuthService.restaurantOwnerLogin(this.loginForm.value).subscribe({
-      next:response=>{
+    this.resAuthService.restaurantOwnerLogin(this.loginForm.value).subscribe(
+      response=>{
         this.resAuthService.loggedIn();
         console.log(response);
         this.responseData = response;
@@ -55,13 +55,14 @@ export class RestaurantLoginComponent {
         console.log(localStorage.getItem("restaurant-Owner-Token"));
           this.router.navigateByUrl("restaurantDashboard");
       }
-    }),
-    (error :any)=>{
+    ,(error :any)=>{
       this.snackBar.open("Invalid credentials","Ok",{
         horizontalPosition:this.horizontalPosition,
         verticalPosition:this.verticalPosition,
       });
     }
+    )
+    
   }
 
 }

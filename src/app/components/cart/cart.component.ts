@@ -63,7 +63,7 @@ ngOnInit(){
   this.userService.deleteAllDishFromCart(dish).subscribe(
     response=>{
       console.log(response);
-      this.snackBar.open("Order Placed","Thank you",{
+      this.snackBar.open("Order Placed","Ok",{
         horizontalPosition:this.horizontalPosition,
         verticalPosition:this.verticalPosition,
       });

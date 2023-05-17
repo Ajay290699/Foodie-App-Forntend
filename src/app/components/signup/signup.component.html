@@ -188,17 +188,17 @@
             <div style="display: flex;justify-content: space-evenly; width: 100%;">
                
                 <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
-                    <input matInput type="text" placeholder="Building Name" id="buildingName"
+                    <input matInput type="text" placeholder="Building/House Name" id="buildingName"
                         formControlName="buildingName">
-                        <mat-error *ngIf="buildingName?.errors?.['required']" style="color: red;">
-                            Building Name is required.
+                        <mat-error *ngIf="buildingName?.errors?.['required']" style="color: red; font-size: 13px;">
+                            Building/House Name is required.
                         </mat-error>
                 </mat-form-field>
-                <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
-                    <input matInput type="number" placeholder="Flat No." id="city"
+                <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%; " >
+                    <input matInput type="number" placeholder="Flat/House No." id="city"
                         formControlName="flatNo">
-                        <mat-error *ngIf="flatNo?.errors?.['required']" style="color: red;">
-                            flatNo  is required.
+                        <mat-error *ngIf="flatNo?.errors?.['required']" style="color: red; font-size: 13px;">
+                            flatNo/House  is required.
                         </mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="fill" style="margin-left: 5px;margin-right: 5px; width: 100%;" >
@@ -250,9 +250,9 @@
                     <mat-error *ngIf="pincode?.errors?.['required']" style="color: red;">
                         Pincode is required.
                     </mat-error>
-                    <mat-error *ngIf="pincode?.errors?.['pattern']" style="color: red;">
+                    <!-- <mat-error *ngIf="pincode?.errors?.['minlength']" style="color: red;">
                         Pincode should have atleast 6 no
-                    </mat-error>
+                    </mat-error> -->
             </mat-form-field>
       
     </div>
