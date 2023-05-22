@@ -28,6 +28,7 @@ ngOnInit(){
   sum:number=0;
 
   getDishInTable(){
+    this.sum=0;
     this.userService.getAllDishFromCart().subscribe(
       res=>{
         this.dishes = res;
@@ -41,6 +42,8 @@ ngOnInit(){
       console.log(error);
     }
   }
+
+ 
 
   deleteDishFromCart(dish:any){
     this.userService.deleteDishFromCart(dish).subscribe(
@@ -74,6 +77,24 @@ ngOnInit(){
  }
 
 }
+
+changeQauntity(dish:any,index:any){
+  const input=document.getElementById('input'+index) as HTMLInputElement;
+  const value= input?.value;
+  dish.quantity=value;
+  this.userService.updateQuantity(dish).subscribe(
+    response=>{
+      console.log(response);
+
+      this.ngOnInit();
+      
+     } ),(error:any)=>{
+    console.log(error);
+ }
+
+}
+
+
 }
 
 // button

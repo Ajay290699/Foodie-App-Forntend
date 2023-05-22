@@ -126,6 +126,14 @@
 <!-- saumya -->
 
 <body class="image">
+
+    <a routerLink="/home">
+        <div class="head">
+          <img src="../../../assets/images/fork.png" alt="#" style="height: 100px; width: 100px; margin-left: 600px;"><h1>Foodie</h1>
+        </div>
+    </a>
+
+
     <form  class="form"  [formGroup]="signupForm">
         <div class="container">
         <h3>New Registration</h3>
@@ -261,6 +269,9 @@
         <button (click)="sendSignupData()">Register</button>
       </div>
     </form>
+
+    
 </body>
+<app-footer></app-footer>
 
  

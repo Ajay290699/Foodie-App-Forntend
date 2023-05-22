@@ -193,7 +193,23 @@
 
 .bg{
     /* background-color: rgb(180, 171, 171); */
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy2RE9HOSKjNrvAbIOGdwA4xX-pNRrGW-364PulIjBaZSsDcAwuRmli9qWU5iVQEUxiGM&usqp=CAU);
-    background-repeat: no-repeat;
+    background-image: url(https://img.freepik.com/premium-photo/colorful-various-herbs-spices-cooking-dark-background_370312-476.jpg);
+    /* background-repeat: no-repeat; */
     background-size: cover;
 }
+
+
+.head{
+    display: flex;
+    background-color: black;
+}
+.head h1{
+    color: white;
+    font-size: 50px;
+    margin-top: 30px;
+    margin-left: -10px;
+}
+a{
+    text-decoration: none;
+}
+

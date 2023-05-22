@@ -1,4 +1,4 @@
-<body>
+<!-- <body>
 
   <app-user-login-header></app-user-login-header>
 
@@ -31,12 +31,15 @@
                   <tbody>
                     <tr *ngFor="let dish of dishes">
                       
-                      <th ><div><img src="../../../assets/images/briyani.png" style="height: 40px;width: 40px;" alt=""> {{dish.dishName | titlecase}}</div></th>
+                      <th ><div><img src="http://localhost:8082/restaurant-service/dishImages/{{dish.dishImage}}" style="height: 40px;width: 40px;" alt=""> {{dish.dishName | titlecase}}</div></th>
                       <th style="color: blue;">{{dish.type | titlecase}}</th>
                   
                       <th style="color: blue;">{{dish.dishPrice}}</th>
                     
-                      <th style="color: blue;">{{dish.quantity}}</th>
+                      <th style="color: blue;">{{dish.quantity}} 
+                        <button id="bb" (click)="add()">+</button>
+                        <button>-</button>
+                      </th>
                       <th style="color: blue;">{{dish.dishPrice * dish.quantity}}</th>
                       <button (click)="deleteDishFromCart(dish)"> <i class="fa fa-remove" style="color: red;"></i></button>
                     </tr>
@@ -56,4 +59,64 @@
           </div>
        
         <app-footer></app-footer>
-      </body>
+      </body> -->
+
+      <body>
+
+        <app-user-login-header></app-user-login-header>
+      
+                 <div class="emptyCart" *ngIf="dishes.length ==0" style=" display: flex; justify-content: center; align-items: center;">
+                  <div class="card" style=" width: fit-content; margin: 50px;  padding: 24px;" >
+        
+                    <div class="center">
+                      <img style="height: 300px;"  src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-5521508-4610092.png" alt="">
+                      <h1 style=" text-align: center; color: red;">Your Cart is Empty</h1>
+                      <h2 style="font-size: large; text-align: center; line-height: 20px;">You can go to home page to <br> view more restaurants</h2>
+                      <button routerLink="../userDashboard" class="order" style="width: 100%; height: 30px; border: whitesmoke 2px solid; color: whitesmoke; background-color: red;" >Order Now</button>
+                    </div>
+                    </div>
+                 </div>
+                 
+            
+                <div *ngIf="dishes.length != 0">
+                  <div style="width: 100%;">
+                    <div >
+                      <table class="item-table" style="width:65% ;margin: 32px; border: 4px black dashed;padding: 21px;">
+                        <thead>
+                          <tr>
+                            <th><h2>Dish name</h2></th>
+                            <th><h2>type</h2></th>
+                            <th><h2>Price</h2></th>
+                            <th><h2>Quantity</h2></th>
+                            <th><h2>Total</h2></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let dish of dishes,let index=index">
+                            
+                            <th ><div><img src="http://localhost:8082/restaurant-service/dishImages/{{dish.dishImage}}" style="height: 40px;width: 40px;" alt=""> {{dish.dishName | titlecase}}</div></th>
+                            <th style="color: blue;">{{dish.type | titlecase}}</th>
+                        
+                            <th style="color: blue;">{{dish.dishPrice}}</th>
+                          
+                            <th style="color: blue;">
+                              <input type="number" min="1" id="input{{index}}" value="{{dish.quantity}}" (change)="changeQauntity(dish,index)"></th>
+                            <th style="color: blue;">{{dish.dishPrice * dish.quantity}}</th>
+                            <button (click)="deleteDishFromCart(dish)"> <i class="fa fa-remove" style="color: red;"></i></button>
+                          </tr>
+                      
+                        </tbody>
+                       
+                      </table>
+                    </div>
+                    
+                  <div style="margin: 32px;">
+                    <h1>Total Price</h1> 
+                    <h2>&#8377; {{sum}}</h2>
+                    <button style="width: 100px;" (click)="clearCart(dishes)">Place Order</button>
+                  </div>
+                  </div>
+                </div>
+             
+              <app-footer></app-footer>
+            </body>

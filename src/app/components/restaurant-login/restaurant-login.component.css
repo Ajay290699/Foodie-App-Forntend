@@ -24,6 +24,9 @@ h1{
     margin-bottom: 50px;
     font-weight: 700;
 }
+a{
+    text-decoration: none;
+}
 button{
     width: 400px;
     margin-bottom: 50px;

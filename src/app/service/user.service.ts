@@ -101,4 +101,12 @@ export class UserService {
     return this.httpclient.get(this.userServcieUrl+"getUserDetails",requestOption) 
   }
 
+  updateQuantity(dish:any){
+    let httpHeaders = new HttpHeaders({
+      'Authorization' : 'Bearer ' +localStorage.getItem("User_Token")
+    })
+    let requestOption = {headers : httpHeaders}
+    return this.httpclient.post(this.userServcieUrl+"updateQuantity",dish,requestOption)
+  }
+
 }

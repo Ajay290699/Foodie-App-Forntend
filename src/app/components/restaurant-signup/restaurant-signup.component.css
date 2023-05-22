@@ -45,3 +45,19 @@ img{
     width: 390px;
     padding: 10px;
 }
+
+
+
+.head{
+    display: flex;
+    background-color: black;
+}
+.head h1{
+    color: white;
+    font-size: 50px;
+    margin-top: 30px;
+    margin-left: -10px;
+}
+a{
+    text-decoration: none;
+}
