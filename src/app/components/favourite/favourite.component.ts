@@ -43,11 +43,7 @@ resturantes:any;
       res=>{
         this.resturantes = res;
        
-      
-        // for(let a=0;a<this.dishes.length;a++)
-        // {
-        //      this.sum=this.sum + this.dishes.quantity*this.dishes.dishPrice;
-        // }
+    
       }
     ),(error:any)=>{
       console.log(error);

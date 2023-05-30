@@ -72,22 +72,7 @@ export class UserLoginDashboardComponent {
     }
   }
 
-  // num:any=0;
-  // color="black";
-  // changecolor(){
-  //   if(this.num==0)
-  //   {
-  //     this.color="red";
-  //     this.num=1;
-  //     alert("Added to Favourites");
-  // }
-  //   else
-  //   {
-  //      this.color="black";
-  //      this.num=0;
-  //      alert("Removed from Favourites");
-  //   }
-  // }
+ 
 
   a:any;
   b:any;

@@ -4,7 +4,6 @@
         <span>Foodie</span>
         <span class="example-spacer"></span>
         <a routerLink="../restaurantDashboard" href=""><mat-icon>dashboard</mat-icon>Dashboard</a>
-        <!-- <a routerLink="../addDish" href=""><mat-icon>add</mat-icon>Add Dish</a> -->
         <a routerLink="../home" href=""><mat-icon>logout</mat-icon>Logout</a>
       </mat-toolbar>
 
@@ -71,14 +70,7 @@
           </div>
 
           <form [formGroup]="dishForm">
-            <!-- <div style="text-align: center;"><img class="mb-4" src="../../../assets/images/Foodie.png" alt="" width="72" height="57">
-            </div> -->
-      
-            <!-- <h1 class="h3 mb-3 fw-normal">Add Your Dish</h1> -->
-            <!-- <div class="form-floating">
-                <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="restaurantName">
-                <label for="floatingInput">Restaurant Name</label>
-              </div> -->
+            
       
             <div class="form-floating">
               <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="dishName">
@@ -102,10 +94,7 @@
               <input style=" margin-top: 5px;" type="file"  (change)="onImageUpload($event)" formControlName="dishImage">  
             </div>
             <br>
-            <!-- <div class="mb-3">
-              <label for="formFile" class="form-label">Upload picture of dish</label>
-              <input class="form-control" type="file" id="formFile">
-            </div> -->
+            
       
       
             <button class="w-100 btn btn-lg btn-primary" (click)="addDishes()">Add dish</button>

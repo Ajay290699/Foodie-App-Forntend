@@ -52,20 +52,7 @@ export class AddDishesComponent {
   }
    
 
-  //  restaurantName1 = this.restaurantForm.value
-  // sendLoginData(){
-  //   console.log(this.loginForm.value);
-  //   this.resAuthService.restaurantOwnerLogin(this.loginForm.value).subscribe({
-  //     next:response=>{
-  //       console.log(response);
-  //       this.responseData = response;
-  //       localStorage.setItem("restaurant-Owner-Token",this.responseData.token);
-  //       localStorage.setItem("resOwnerEmail",this.responseData.emailId)
-  //       console.log(localStorage.getItem("resOwnerEmail"))
-  //       console.log(localStorage.getItem("restaurant-Owner-Token"));
-  //         this.router.navigateByUrl("restaurantDashboard");
-  //     }
-  //   })
+
 
   d:any = {}
 

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Restaurant } from 'src/app/model/restaurant/restaurant';
-import { RestaurantOwner } from 'src/app/model/restaurant/restaurant-owner';
 import { RestaurantService } from 'src/app/service/restaurant.service';
 
 @Component({
